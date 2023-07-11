@@ -17,6 +17,10 @@ img {
 
 }
 
+i {
+    pointer-events: none;
+}
+
 body {
     background-color: $background;
 }
@@ -81,19 +85,17 @@ body {
 
 #mobile-nav-menu {
     height: 100vh;
-    width: 0;
+    overflow: hidden;
     background-color: $background;
     font-size: 2rem;
-    padding: 1.5rem;
-
-    // the menu will activate by added a clas that has the opposite of these styles
-    opacity: 0;
-    overflow: hidden;
     position: absolute;
-    display: block;
-        
+    transition: 250ms;
+    width: 0%;
+
+    
     ul {
         li {
+            color: yellow;
             list-style-type: none;
             padding: 1.5rem;
 
@@ -112,7 +114,25 @@ body {
     }
 }
 
+#mobile-nav-exit {
+    display: none;
+    height: 50px;
+    width: 50px;
+    font-size: 2.9rem;
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    cursor: pointer;
+    transition: 250ms;
 
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.activate {
+    width: 100%;
+}
 
 // HERO BACKGROUND IMAGE 
 
