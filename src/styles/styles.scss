@@ -1,4 +1,5 @@
-$primary: #C62368;
+$primary: #ff2d85;
+// $primary: #C62368;
 $secondary: #566bf2;
 $accent: #abc1ff;
 $background: #001220;
@@ -142,6 +143,7 @@ body {
     
     .hero-item:nth-of-type(2) {
         align-self: center;
+        
     }
     
     // Flex item that contains the greeting and name
@@ -149,25 +151,16 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        white-space: nowrap;
-        
         justify-content: center;
-        font-size: clamp(0.6rem, 3vw, 2rem);
-        // text-align: center;
+        padding: 1.5rem;
         
-        h1 {
-            span {
-                font-family: 'Dancing Script';
-                border-bottom: 4px solid $primary;
-                color: $primary;
-            }
+        h1#showcase {
+            font-family: 'Dancing Script';
+            color: $primary;
+            font-size: 5rem;
         }
-        h3 {
-            span {
-                color: $secondary;
-                
-            }
-        }
+
+    
 
         #contact-btn {
             padding: 1rem;
@@ -178,8 +171,10 @@ body {
             background-color: $secondary;
             transition: 250ms;
             cursor: pointer;
+            width: 300px;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
+            margin: 0 auto;
+            
             &:hover {
                 background-color: $accent;
             }
@@ -189,8 +184,9 @@ body {
 }
 
 #hero-img {
-    max-height: 500px;
+    min-height: 500px;
     opacity: 0.7;
+    object-fit: cover;
     border-radius: 15% 35%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -347,7 +343,7 @@ body {
         .hero-item:nth-child(1){
             max-width: 500px;
             text-align: center;
-            white-space: nowrap;
+            // white-space: nowrap;
         }
 
         .hero-item:nth-child(2){
