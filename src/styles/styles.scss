@@ -1,3 +1,8 @@
+$primary: #C62368;
+$secondary: #566bf2;
+$accent: #748ccd;
+$background: #001220;
+
 *  {
     margin: 0;
     padding: 0;
@@ -14,53 +19,112 @@ img {
 body {
     height: 100vh;
     width: 100vw;
+    background-color: $background;
 }
 
-
-$primary: #b32222;
-$secondary: #223296;
-$accent: #7590dc;
-
-svg {
-    position: absolute;
-    z-index: -3;
-    border: 10px solid red;
-    width: 1200px;
-
-}
 
 // NAVBAR 
 
-
 #navbar {
     font-size: max(1rem, 1.6rem);
-    color: #c41d1d;
+    color: $primary;
     display: flex;
     justify-content: space-around;
     padding: 1.5rem;
+    // margin-bottom: 4.5rem;
     
     ul {
-
+        
         li {
             display: inline;
             padding: 1rem;
             font-size: max(1rem, 1.6rem);
             color: #c41d1d;
-
+            
             a {
                 text-decoration: none;
                 color: white;
                 transition: 250ms;
-
+                
                 &:hover {
                     color: $accent;
                 }
-
+                
             }
-
+            
         }
     }
 }
+
+// HERO BACKGROUND IMAGE 
+
+#heroBG {
+    position: absolute;
+    z-index: -3;
+    aspect-ratio: 960/500;
+    width: 100vw;
+    min-height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./svg/heroBG.svg');
+}
+
+
+// HERO SECTION 
+
+#hero {
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
+    gap: 15%;
+    color: white;
+    margin-top: 1%;
+    
+    .hero-item:nth-of-type(2) {
+        align-self: center;
+    }
+    
+    // Flex item that contains the greeting and name
+    .hero-item:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
+        justify-content: center;
+        font-size: min(2rem, 3rem);
+        // text-align: center;
+        
+        h1 {
+            span {
+                border-bottom: 4px solid $primary;
+                color: $primary;
+            }
+        }
+        h3 {
+            span {
+                color: $secondary;
+            }
+        }
+
+        #contact-btn {
+            padding: 1rem;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 1rem;
+            color: white;
+            background-color: $accent;
+        }
+        
+    }
+}
+
+#hero-img {
+    max-height: 500px;
+    opacity: 0.9;
+    border-radius: 25% 15%;
+}
+
 
 
 @media (min-width: 768px) {
