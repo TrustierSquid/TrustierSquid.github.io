@@ -20,14 +20,23 @@ body {
 
 #navbar {
   font-size: 1.6rem;
-  color: #ff2d85;
+  color: #C62368;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-around;
   padding: 1.5rem;
   margin-bottom: 2rem;
+  background-color: #001220;
+  box-shadow: black 0px 20px 30px -10px;
 }
 #navbar h2 {
   font-family: "Dancing Script";
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
 }
 #navbar ul li {
   display: inline;
@@ -51,7 +60,7 @@ body {
   border-radius: 0.3rem;
   border: none;
   background-color: transparent;
-  color: #ff2d85;
+  color: #C62368;
   display: none;
   transition: 250ms;
 }
@@ -74,7 +83,7 @@ body {
   padding: 1.5rem;
 }
 #mobile-nav-menu ul li h2 {
-  color: #ff2d85;
+  color: #C62368;
 }
 #mobile-nav-menu ul li a {
   color: white;
@@ -91,7 +100,7 @@ body {
   font-size: 2.9rem;
   background-color: transparent;
   border: none;
-  color: #ff2d85;
+  color: #C62368;
   cursor: pointer;
   transition: 250ms;
 }
@@ -122,7 +131,7 @@ body {
   gap: 15%;
   color: white;
   margin-top: 1%;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
   padding: 3rem;
 }
 #hero .hero-item:nth-of-type(2) {
@@ -137,8 +146,9 @@ body {
 }
 #hero .hero-item:nth-of-type(1) h1#showcase {
   font-family: "Dancing Script";
-  color: #ff2d85;
+  color: #C62368;
   font-size: 5rem;
+  text-shadow: -3px -1px 16px #C62368;
 }
 #hero .hero-item:nth-of-type(1) #contact-btn {
   padding: 1rem;
@@ -157,22 +167,25 @@ body {
 }
 #hero .hero-item:nth-of-type(1) #stat-container {
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
 }
 #hero .hero-item:nth-of-type(1) #stat-container img {
   height: 50px;
   cursor: pointer;
-  background-color: #abc1ff;
+  background-color: #C62368;
   padding: 0.3rem;
   border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #hero-img {
   min-height: 500px;
-  opacity: 0.7;
+  opacity: 0.9;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15% 35%;
+  border: 5px solid #C62368;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -180,7 +193,7 @@ body {
   z-index: 3;
   aspect-ratio: 960/500;
   width: 100vw;
-  min-height: 900px;
+  min-height: 150vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -198,7 +211,7 @@ body {
   margin-top: 15%;
 }
 #about #about-flex-wrapper .section-header {
-  color: yellow;
+  color: #abc1ff;
   font-size: 1.5rem;
 }
 #about #about-flex-wrapper .about-item:nth-of-type(1) {
@@ -209,7 +222,7 @@ body {
 #about #about-flex-wrapper .about-item:nth-of-type(1) h1 {
   font-size: 2.8rem;
   font-family: "Dancing Script";
-  color: #ff2d85;
+  color: #C62368;
 }
 #about #about-flex-wrapper .about-item:nth-of-type(2) {
   display: grid;
@@ -218,7 +231,7 @@ body {
 }
 #about #about-flex-wrapper .about-item:nth-of-type(2) article {
   height: 300px;
-  border-bottom: 2px solid #ff2d85;
+  border-bottom: 2px solid #C62368;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -238,42 +251,64 @@ body {
   text-align: center;
   align-items: center;
   gap: 1rem;
+  /* #react-projects {
+      padding: 1rem;
+      border: none;
+      background: rgb(0,104,179);
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 250ms;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+      &:hover {
+          background-color: #566bf2;
+      }
+
+      a {
+          text-decoration: none;
+          color: white;
+      }
+  }
+
+  #bs-projects {
+      padding: 1rem;
+      border: none;
+      background: rgb(101, 0, 179);
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 250ms;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+      &:hover {
+          background-color: #566bf2;
+      }
+
+      a {
+          text-decoration: none;
+          color: white;
+      }
+  } */
 }
 #about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information .preprocessor-imgs {
   height: 40px;
   width: 40px;
 }
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #react-projects {
-  padding: 1rem;
-  border: none;
-  background: rgb(0, 104, 179);
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: 250ms;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+.swirl {
+  z-index: 2;
+  aspect-ratio: 960/500;
+  width: 100vw;
+  min-height: 900px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./svg/projects.svg");
+  padding: 2rem;
 }
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #react-projects:hover {
-  background-color: #566bf2;
-}
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #react-projects a {
-  text-decoration: none;
+
+#project {
   color: white;
-}
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #bs-projects {
-  padding: 1rem;
-  border: none;
-  background: rgb(101, 0, 179);
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: 250ms;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #bs-projects:hover {
-  background-color: #566bf2;
-}
-#about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information #bs-projects a {
-  text-decoration: none;
-  color: white;
+  z-index: 3;
 }
 
 @media (max-width: 1110px) {
@@ -295,12 +330,18 @@ body {
   }
   #hero #contact-btn {
     margin: 0 auto;
+    align-self: center;
   }
   #hero .hero-item:nth-child(2) {
     position: absolute;
     opacity: 0.3;
     z-index: -3;
     max-width: 100%;
+  }
+  #hero #stat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   #heroBG {
     background-image: url("./svg/mobileHeroBG.svg");
@@ -310,7 +351,7 @@ body {
   }
   #about #about-flex-wrapper .section-header {
     color: yellow;
-    text-align: left;
+    text-align: center;
     font-size: 2rem;
   }
   #about #about-flex-wrapper .about-item:nth-of-type(2) {
@@ -334,6 +375,7 @@ body {
     text-align: center;
   }
   #about #about-flex-wrapper .about-item:nth-of-type(1) p {
-    text-align: left;
+    text-align: center;
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -17,6 +17,7 @@ window.addEventListener('click', (element)=> {
         mobileNavMenu.style.width = '100%';
         mobileNavBtn.style.display = 'none';
         mobileNavExitBtn.style.display = 'block';
+        location.href = '#'
         disableScroll();
     } else if (element.target === mobileNavExitBtn) {
         mobileNavExitBtn.style.display = 'none';

@@ -1,5 +1,5 @@
-$primary: #ff2d85;
-// $primary: #C62368;
+// $primary: #ff2d85;
+$primary: #C62368;
 $secondary: #566bf2;
 $accent: #abc1ff;
 $background: #001220;
@@ -31,16 +31,23 @@ body {
 #navbar {
     font-size: max(1rem, 1.6rem);
     color: $primary;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     padding: 1.5rem;
     margin-bottom: 2rem;
+    background-color: $background;
+    box-shadow: black 0px 20px 30px -10px;
 
     h2 {
         font-family: 'Dancing Script';
     }
     
     ul {
+        display: flex;
+        align-items: center;
         
         li {
             display: inline;
@@ -158,7 +165,7 @@ body {
     gap: 15%;
     color: white;
     margin-top: 1%;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     padding: 3rem;
     
     .hero-item:nth-of-type(2) {
@@ -178,6 +185,7 @@ body {
             font-family: 'Dancing Script';
             color: $primary;
             font-size: 5rem;
+            text-shadow: -3px -1px 16px $primary;
         }
 
     
@@ -202,14 +210,16 @@ body {
 
         #stat-container {
             display: flex;
+            flex-direction: row;
             gap: 1.5rem;
             
             img {
                 height: 50px;
                 cursor: pointer;
-                background-color: $accent;
+                background-color: $primary;
                 padding: 0.3rem;
                 border-radius: 0.3rem;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
         }
         
@@ -218,9 +228,10 @@ body {
 
 #hero-img {
     min-height: 500px;
-    opacity: 0.7;
+    opacity: 0.9;
     object-fit: cover;
     border-radius: 15% 35%;
+    border: 5px solid $primary;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -231,7 +242,7 @@ body {
     z-index: 3;
     aspect-ratio: 960/500;
     width: 100vw;
-    min-height: 900px;
+    min-height: 150vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -249,7 +260,7 @@ body {
         margin-top: 15%;
 
         .section-header {
-            color: yellow;
+            color: $accent;
             font-size: 1.5rem;
         }
 
@@ -300,7 +311,7 @@ body {
                         width: 40px;
                     }
 
-                    #react-projects {
+                    /* #react-projects {
                         padding: 1rem;
                         border: none;
                         background: rgb(0,104,179);
@@ -336,7 +347,7 @@ body {
                             text-decoration: none;
                             color: white;
                         }
-                    }
+                    } */
                 }
             }
 
@@ -347,6 +358,25 @@ body {
     }
     
 }
+
+// SVG swirl design for padding space
+.swirl {
+    z-index: 2;
+    aspect-ratio: 960/500;
+    width: 100vw;
+    min-height: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./svg/projects.svg');
+    padding: 2rem;
+}
+
+#project {
+    color: white;
+    z-index: 3;
+}
+
 
 
 @media (max-width: 1110px) {
@@ -381,6 +411,7 @@ body {
 
         #contact-btn {
             margin: 0 auto;
+            align-self: center;
         }
 
         .hero-item:nth-child(2){
@@ -389,6 +420,12 @@ body {
             opacity: 0.3;
             z-index: -3;
             max-width: 100%;
+        }
+
+        #stat-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
@@ -405,7 +442,7 @@ body {
             width: 90vw;
             .section-header {
                 color: yellow;
-                text-align: left;
+                text-align: center;
                 font-size: 2rem;
             }
 
@@ -435,7 +472,8 @@ body {
                 }
 
                 p {
-                    text-align: left;
+                    text-align: center;
+                    font-size: 1.2rem;
                 }
                 
                 font-size: clamp(1rem, 1.5rem, 2.5rem);
