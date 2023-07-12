@@ -1,0 +1,20 @@
+{
+  "name": "client-portfolio",
+  "version": "1.0.0",
+  "description": "- Portfolio single page site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrustierSquid/Client-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrustierSquid/Client-portfolio/issues"
+  },
+  "homepage": "https://github.com/TrustierSquid/Client-portfolio#readme"
+}
