@@ -4,6 +4,7 @@ $secondary: #566bf2;
 $accent: #abc1ff;
 $background: #001220;
 
+
 *  {
     margin: 0;
     padding: 0;
@@ -29,11 +30,11 @@ body {
 // NAVBAR 
 
 #navbar {
-    font-size: max(1rem, 1.6rem);
+    font-size: max(1rem, 1.2rem);
     color: $primary;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     display: flex;
     justify-content: space-around;
     padding: 1.5rem;
@@ -52,7 +53,7 @@ body {
         li {
             display: inline;
             padding: 1rem;
-            font-size: max(1rem, 1.6rem);
+            font-size: max(1rem, 1.2rem);
             color: #c41d1d;
             
             a {
@@ -95,6 +96,8 @@ body {
     overflow: hidden;
     background-color: $background;
     font-size: 2rem;
+    top: 100px;
+    z-index: 4;
     position: absolute;
     transition: 250ms;
     width: 0%;
@@ -161,11 +164,11 @@ body {
 #hero {
     display: flex;
     justify-content: center;
-    min-height: 600px;
+    min-height: 500px;
     gap: 15%;
     color: white;
     margin-top: 1%;
-    margin-bottom: 8%;
+    // margin-bottom: 1%;
     padding: 3rem;
     
     .hero-item:nth-of-type(2) {
@@ -240,14 +243,15 @@ body {
 // about section 
 #about {
     z-index: 3;
-    aspect-ratio: 960/500;
-    width: 100vw;
-    min-height: 150vh;
+    aspect-ratio: 960/300;
+
+    max-height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url('./svg/aboutBG.svg');
     padding: 2rem;
+
 
     #about-flex-wrapper {
         padding: 3rem;
@@ -258,11 +262,7 @@ body {
         gap: 5rem;
         color: white;
         margin-top: 15%;
-
-        .section-header {
-            color: $accent;
-            font-size: 1.5rem;
-        }
+        
 
         .about-item:nth-of-type(1) {
             color: white;
@@ -273,6 +273,7 @@ body {
                 font-size: clamp(2rem, 2.8rem, 3rem);
                 font-family: "Dancing Script";
                 color: $primary;
+                text-shadow: -3px -1px 16px $primary;
             }
 
         }
@@ -311,43 +312,6 @@ body {
                         width: 40px;
                     }
 
-                    /* #react-projects {
-                        padding: 1rem;
-                        border: none;
-                        background: rgb(0,104,179);
-                        cursor: pointer;
-                        border-radius: 0.5rem;
-                        transition: 250ms;
-                        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-                        
-                        &:hover {
-                            background-color: #566bf2;
-                        }
-                        
-                        a {
-                            text-decoration: none;
-                            color: white;
-                        }
-                    }
-
-                    #bs-projects {
-                        padding: 1rem;
-                        border: none;
-                        background: rgb(101, 0, 179);
-                        cursor: pointer;
-                        border-radius: 0.5rem;
-                        transition: 250ms;
-                        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-                        
-                        &:hover {
-                            background-color: #566bf2;
-                        }
-                        
-                        a {
-                            text-decoration: none;
-                            color: white;
-                        }
-                    } */
                 }
             }
 
@@ -359,8 +323,16 @@ body {
     
 }
 
-// SVG swirl design for padding space
-.swirl {
+
+.section-header {
+    color: $accent;
+    font-size: 1.5rem;
+}
+
+
+// 
+
+#projects {
     z-index: 2;
     aspect-ratio: 960/500;
     width: 100vw;
@@ -370,9 +342,6 @@ body {
     background-size: cover;
     background-image: url('./svg/projects.svg');
     padding: 2rem;
-}
-
-#project {
     color: white;
     z-index: 3;
 }
@@ -403,6 +372,8 @@ body {
     //HERO RESPONSIVENESS
 
     #hero {
+        margin-bottom: 20%;
+        
         .hero-item:nth-child(1){
             max-width: 500px;
             text-align: center;
@@ -431,15 +402,16 @@ body {
 
     #heroBG {
         background-image: url('./svg/mobileHeroBG.svg');
-
     }
 
     // ABOUT RESPONSIVENESS
 
     #about {
+        background-image: url('./svg/mobileAboutBG.svg');
 
         #about-flex-wrapper {
             width: 90vw;
+            margin-top: 40%;
             .section-header {
                 color: yellow;
                 text-align: center;
@@ -480,6 +452,9 @@ body {
             }
             
         }
+    }
+
+    .swirl {
     }
     
     

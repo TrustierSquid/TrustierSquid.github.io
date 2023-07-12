@@ -19,11 +19,11 @@ body {
 }
 
 #navbar {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #C62368;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   justify-content: space-around;
   padding: 1.5rem;
@@ -41,7 +41,7 @@ body {
 #navbar ul li {
   display: inline;
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: #c41d1d;
 }
 #navbar ul li a {
@@ -73,6 +73,8 @@ body {
   overflow: hidden;
   background-color: #001220;
   font-size: 2rem;
+  top: 100px;
+  z-index: 4;
   position: absolute;
   transition: 250ms;
   width: 0%;
@@ -127,11 +129,10 @@ body {
 #hero {
   display: flex;
   justify-content: center;
-  min-height: 600px;
+  min-height: 500px;
   gap: 15%;
   color: white;
   margin-top: 1%;
-  margin-bottom: 8%;
   padding: 3rem;
 }
 #hero .hero-item:nth-of-type(2) {
@@ -191,9 +192,8 @@ body {
 
 #about {
   z-index: 3;
-  aspect-ratio: 960/500;
-  width: 100vw;
-  min-height: 150vh;
+  aspect-ratio: 960/300;
+  max-height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -210,10 +210,6 @@ body {
   color: white;
   margin-top: 15%;
 }
-#about #about-flex-wrapper .section-header {
-  color: #abc1ff;
-  font-size: 1.5rem;
-}
 #about #about-flex-wrapper .about-item:nth-of-type(1) {
   color: white;
   font-size: 1.5rem;
@@ -223,6 +219,7 @@ body {
   font-size: 2.8rem;
   font-family: "Dancing Script";
   color: #C62368;
+  text-shadow: -3px -1px 16px #C62368;
 }
 #about #about-flex-wrapper .about-item:nth-of-type(2) {
   display: grid;
@@ -251,50 +248,18 @@ body {
   text-align: center;
   align-items: center;
   gap: 1rem;
-  /* #react-projects {
-      padding: 1rem;
-      border: none;
-      background: rgb(0,104,179);
-      cursor: pointer;
-      border-radius: 0.5rem;
-      transition: 250ms;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-      &:hover {
-          background-color: #566bf2;
-      }
-
-      a {
-          text-decoration: none;
-          color: white;
-      }
-  }
-
-  #bs-projects {
-      padding: 1rem;
-      border: none;
-      background: rgb(101, 0, 179);
-      cursor: pointer;
-      border-radius: 0.5rem;
-      transition: 250ms;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-      &:hover {
-          background-color: #566bf2;
-      }
-
-      a {
-          text-decoration: none;
-          color: white;
-      }
-  } */
 }
 #about #about-flex-wrapper .about-item:nth-of-type(2) article .article-information .preprocessor-imgs {
   height: 40px;
   width: 40px;
 }
 
-.swirl {
+.section-header {
+  color: #abc1ff;
+  font-size: 1.5rem;
+}
+
+#projects {
   z-index: 2;
   aspect-ratio: 960/500;
   width: 100vw;
@@ -304,9 +269,6 @@ body {
   background-size: cover;
   background-image: url("./svg/projects.svg");
   padding: 2rem;
-}
-
-#project {
   color: white;
   z-index: 3;
 }
@@ -323,6 +285,9 @@ body {
   }
   #navbar #mobile-nav-btn {
     display: block;
+  }
+  #hero {
+    margin-bottom: 20%;
   }
   #hero .hero-item:nth-child(1) {
     max-width: 500px;
@@ -346,8 +311,12 @@ body {
   #heroBG {
     background-image: url("./svg/mobileHeroBG.svg");
   }
+  #about {
+    background-image: url("./svg/mobileAboutBG.svg");
+  }
   #about #about-flex-wrapper {
     width: 90vw;
+    margin-top: 40%;
   }
   #about #about-flex-wrapper .section-header {
     color: yellow;
