@@ -27,6 +27,10 @@ body {
     background-color: $background;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .social-media {
     height: 40px;
     width: 40px;
@@ -238,6 +242,12 @@ body {
                 padding: 0.3rem;
                 border-radius: 0.3rem;
                 background: rgb(198,35,104);
+                transition: 250ms;
+
+                &:hover {
+                    background-color: $accent;
+                    height: 55px;    
+                }
             }
         }
         

@@ -18,6 +18,10 @@ body {
   background-color: #001220;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .social-media {
   height: 40px;
   width: 40px;
@@ -188,6 +192,11 @@ body {
   padding: 0.3rem;
   border-radius: 0.3rem;
   background: rgb(198, 35, 104);
+  transition: 250ms;
+}
+#hero .hero-item:nth-of-type(1) #stat-container img:hover {
+  background-color: #abc1ff;
+  height: 55px;
 }
 #hero .hero-item:nth-of-type(2) {
   align-self: center;
