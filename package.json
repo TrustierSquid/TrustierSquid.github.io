@@ -2,9 +2,10 @@
   "name": "client-portfolio",
   "version": "1.0.0",
   "description": "- Portfolio single page site",
-  "main": "index.js",
+  "main": "navbarFunctions.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/TrustierSquid/Client-portfolio/issues"
   },
-  "homepage": "https://github.com/TrustierSquid/Client-portfolio#readme"
+  "homepage": "https://github.com/TrustierSquid/Client-portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3",
+    "sass": "^1.63.6",
+    "typescript": "^5.1.6"
+  }
 }
