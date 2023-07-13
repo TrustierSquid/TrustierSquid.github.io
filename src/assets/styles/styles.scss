@@ -403,6 +403,13 @@ body {
             gap: 2rem;
             margin-top: 5rem;
 
+            h1 {
+                font-family: "Dancing script";
+                font-size: 2.5rem;
+                color: $primary;
+                text-shadow: -3px -1px 16px $primary;
+            }
+
             .project-section:nth-of-type(1){
                 background: rgb(198,35,104);
                 background: linear-gradient(305deg, rgba(198,35,104,1) 12%, rgba(0,58,103,1) 100%); 
@@ -426,6 +433,7 @@ body {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
                 img {
                     max-width: 100%;
@@ -455,6 +463,7 @@ body {
                             background-color: $secondary;
                             padding: 0.5rem;
                             border-radius: 0.5rem;
+                            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                         }
 
                         .tools-used:nth-of-type(3) {
@@ -476,17 +485,31 @@ body {
     
 }
 
-// footer {
-//     position: absolute;
-//     width: 100%;
-//     min-height: 100px;
-//     background-color: #001220;
-//     display: grid;
-//     place-items: center;
-//     border-top: #003a67 2px solid;
-//     margin-top: 2rem;
-// }
 
+#footerBG {
+    aspect-ratio: 960/420;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./svg/contactBG.svg');
+}
+
+footer {
+    position: absolute;
+    width: 95%;
+    padding: 1rem;
+    min-height: 100px;
+    display: grid;
+    justify-content: left;
+    place-items: center;
+    border-top: #003a67 2px solid;
+    margin-top: 2rem;
+    height: 100px;
+
+    div {
+        display: flex;
+    }
+}
 
 @media (max-width: 992px) {
 
