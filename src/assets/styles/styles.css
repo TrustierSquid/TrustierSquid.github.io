@@ -18,6 +18,20 @@ body {
   background-color: #001220;
 }
 
+.social-media {
+  height: 40px;
+  width: 40px;
+  font-size: 2rem;
+  background-color: transparent !important;
+  color: #C62368;
+  border: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+.social-media:hover {
+  color: #abc1ff;
+}
+
 #navbar {
   font-size: 1.2rem;
   color: #C62368;
@@ -25,7 +39,7 @@ body {
   top: 0;
   z-index: 5;
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: black 0px 20px 30px -10px;
@@ -357,17 +371,6 @@ body {
 }
 #projects #project-flex-wrapper #project-showcase-container .project-section .project-information .project-notes .tools-used:nth-of-type(3):hover {
   background-color: #003a67;
-}
-
-footer {
-  position: absolute;
-  width: 100%;
-  min-height: 100px;
-  background-color: #001220;
-  display: grid;
-  place-items: center;
-  border-top: #003a67 2px solid;
-  margin-top: 2rem;
 }
 
 @media (max-width: 992px) {
