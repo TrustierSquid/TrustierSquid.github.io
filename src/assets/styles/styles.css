@@ -382,7 +382,8 @@ body {
 }
 
 #footerBG {
-  aspect-ratio: 960/420;
+  aspect-ratio: 960/220;
+  min-height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -471,6 +472,9 @@ footer div {
   #projects #project-showcase-container .project-section {
     flex-direction: column;
     gap: 2rem;
+  }
+  #footerBG {
+    background-image: none;
   }
 }
 @media (max-width: 500px) {
