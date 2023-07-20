@@ -27,7 +27,7 @@ html {
   width: 40px;
   font-size: 2rem;
   background-color: transparent !important;
-  color: #C62368;
+  color: #c62368;
   border: none;
   cursor: pointer;
   transition: 250ms;
@@ -38,7 +38,7 @@ html {
 
 #navbar {
   font-size: 1.2rem;
-  color: #C62368;
+  color: #c62368;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -79,7 +79,7 @@ html {
   border-radius: 0.3rem;
   border: none;
   background-color: transparent;
-  color: #C62368;
+  color: #c62368;
   display: none;
   transition: 250ms;
 }
@@ -104,7 +104,7 @@ html {
   padding: 1.5rem;
 }
 #mobile-nav-menu ul li h2 {
-  color: #C62368;
+  color: #c62368;
 }
 #mobile-nav-menu ul li a {
   color: white;
@@ -121,7 +121,7 @@ html {
   font-size: 2.9rem;
   background-color: transparent;
   border: none;
-  color: #C62368;
+  color: #c62368;
   cursor: pointer;
   transition: 250ms;
 }
@@ -156,9 +156,9 @@ html {
 }
 #hero .hero-item:nth-of-type(1) h1#showcase {
   font-family: "Dancing Script";
-  color: #C62368;
+  color: #c62368;
   font-size: 5rem;
-  text-shadow: -3px -1px 16px #C62368;
+  text-shadow: -3px -1px 16px #c62368;
 }
 #hero .hero-item:nth-of-type(1) #contact-btn {
   padding: 1rem;
@@ -188,7 +188,7 @@ html {
 #hero .hero-item:nth-of-type(1) #stat-container img {
   height: 50px;
   cursor: pointer;
-  background-color: #C62368;
+  background-color: #c62368;
   padding: 0.3rem;
   border-radius: 0.3rem;
   background: rgb(198, 35, 104);
@@ -211,7 +211,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15% 35%;
-  border: 5px solid #C62368;
+  border: 5px solid #c62368;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -249,23 +249,21 @@ html {
   gap: 1.5rem;
 }
 #about #about-flex-wrapper .about-item:nth-of-type(1) article .skills-image:nth-of-type(1) {
-  background: rgb(198, 35, 104);
-  background: rgb(198, 35, 104);
-  background: linear-gradient(293deg, rgb(198, 35, 104) 53%, rgb(0, 58, 103) 100%);
+  background: linear-gradient(-208deg, rgb(0, 58, 103) 53%, rgb(198, 35, 104) 100%);
 }
 #about #about-flex-wrapper .about-item:nth-of-type(1) article .skills-image:nth-of-type(2) {
-  background: rgb(198, 35, 104);
-  background: linear-gradient(81deg, rgb(198, 35, 104) 53%, rgb(0, 58, 103) 100%);
+  background: rgb(0, 58, 103);
 }
 #about #about-flex-wrapper .about-item:nth-of-type(1) article .skills-image:nth-of-type(3) {
-  background: rgb(198, 35, 104);
-  background: linear-gradient(205deg, rgb(198, 35, 104) 53%, rgb(0, 58, 103) 100%);
+  background: rgb(0, 58, 103);
+}
+#about #about-flex-wrapper .about-item:nth-of-type(1) article .skills-image:nth-of-type(4) {
+  background: linear-gradient(208deg, rgb(0, 58, 103) 53%, rgb(198, 35, 104) 100%);
 }
 #about #about-flex-wrapper .about-item:nth-of-type(1) article .skills-image {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  background: linear-gradient(208deg, rgb(0, 58, 103) 53%, rgb(198, 35, 104) 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -289,8 +287,8 @@ html {
 #about #about-flex-wrapper .about-item:nth-of-type(2) h1 {
   font-size: 2.8rem;
   font-family: "Dancing Script";
-  color: #C62368;
-  text-shadow: -3px -1px 16px #C62368;
+  color: #c62368;
+  text-shadow: -3px -1px 16px #c62368;
 }
 
 .section-header {
@@ -329,8 +327,8 @@ html {
 #projects #project-flex-wrapper #project-showcase-container h1 {
   font-family: "Dancing script";
   font-size: 2.5rem;
-  color: #C62368;
-  text-shadow: -3px -1px 16px #C62368;
+  color: #c62368;
+  text-shadow: -3px -1px 16px #c62368;
 }
 #projects #project-flex-wrapper #project-showcase-container .project-section:nth-of-type(1) {
   background: rgb(198, 35, 104);
@@ -382,7 +380,7 @@ html {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #projects #project-flex-wrapper #project-showcase-container .project-section .project-information .project-notes .tools-used:nth-of-type(3) {
-  background-color: #C62368;
+  background-color: #c62368;
   transition: 250ms;
   cursor: pointer;
 }
