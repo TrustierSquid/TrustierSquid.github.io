@@ -553,11 +553,54 @@ footer {
   
   
   #form-container {
-    background-color: #333;
-    height: 400px;
+    background-color: #123;
+    height: 500px;
     width: 600px;
     border-radius: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    #contact-form {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1.5rem;
+
+      .contact-component {
+        label {
+          color: white;
+        }
+
+        #contact-message {
+          height: 100px;
+          width: 100%;
+        }
+        
+        //text boxes
+        input {
+          height: 30px;
+          width: 100%;
+        }
+
+        button {
+          height: 30px;
+          padding: 0.5rem;
+          width: 200px;
+          background-color: $primary;
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: 250ms;
+          
+          &:hover {
+            background-color: #222;
+          }
+        }
+        
+      }
+
+    }
+    
   }
 }
 
