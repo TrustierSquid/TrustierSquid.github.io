@@ -2,3 +2,6 @@ node_modules/
 public/
 cache/
 dist/
+.vscode/
+vars/
+.parcel-cache/
