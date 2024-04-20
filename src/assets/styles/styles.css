@@ -15,7 +15,7 @@ i {
 }
 
 body {
-  background-color: #001220;
+  background: linear-gradient(90deg, #1b0b20, #2f0246);
 }
 
 html {
@@ -46,9 +46,8 @@ html {
   justify-content: space-around;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  box-shadow: black 0px 20px 30px -10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   gap: 3rem;
-  background-color: #001220;
 }
 #navbar h2 {
   font-family: "Dancing Script";
@@ -90,7 +89,7 @@ html {
 #mobile-nav-menu {
   height: 100vh;
   overflow: hidden;
-  background-color: #001220;
+  background-color: rgb(0, 18, 32);
   font-size: 2rem;
   top: 100px;
   z-index: 4;
@@ -141,10 +140,11 @@ html {
   color: white;
   margin-top: 1%;
   padding: 3rem;
+  /* // background swirl
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("svg/heroBG2.svg");
+  background-image: url("svg/heroBG2.svg"); */
 }
 #hero .hero-item:nth-of-type(1) {
   display: flex;
@@ -202,7 +202,8 @@ html {
   align-self: center;
 }
 #hero .hero-item:nth-of-type(2) img {
-  width: 300px;
+  width: 150px;
+  opacity: 0.4;
 }
 
 #hero-img {
@@ -210,9 +211,12 @@ html {
   opacity: 0.9;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15% 35%;
   border: 5px solid #c62368;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#hero-canvas {
+  justify-content: space-around;
 }
 
 #about {
@@ -475,9 +479,10 @@ footer div {
 @media (max-width: 992px) {
   #navbar {
     justify-content: space-between;
+    background-color: rgba(0, 18, 32, 0.9);
   }
-  #navbar h3 {
-    font-size: 1.5rem;
+  #navbar h2 {
+    font-size: 2rem;
   }
   #navbar #nav-list {
     display: none;
