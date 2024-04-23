@@ -3,7 +3,7 @@ $primary: #c62368;
 $secondary: #566bf2;
 $accent: #abc1ff;
 $backgroundSkill: #003a67;
-$background: rgb(0, 18, 32);
+$background: #001220;
 
 * {
   margin: 0;
@@ -171,7 +171,7 @@ html {
 #hero {
   display: flex;
   justify-content: space-around;
-  min-height: 500px;
+  min-height: 800px;
   gap: 5%;
   color: white;
   margin-top: 1%;
@@ -191,6 +191,7 @@ html {
     flex-direction: column;
     gap: 1.5rem;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
     margin-inline: 2rem;
 
@@ -249,13 +250,13 @@ html {
     }
   }
 
-  .hero-item:nth-of-type(2) {
+  /* .hero-item:nth-of-type(2) {
     align-self: center;
     img {
       width: min(300px, 150px);
       opacity: 0.4;
     }
-  }
+  } */
 }
 
 #hero-img {
@@ -272,7 +273,6 @@ html {
 
 #hero-canvas {
   // display: flex;
-  justify-content: space-around;
 }
 
 
@@ -285,103 +285,64 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("svg/aboutBG.svg");
+  background-image: url("svg/blurry-gradient-haikei.svg");
   padding: 2rem;
 
   #about-flex-wrapper {
     padding: 0.5rem;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 70vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+    width: 80vw;
+    height: 70vh;
     gap: 5rem;
     color: white;
     // margin-top: 10%;
 
-    // skills icons
-    .about-item:nth-of-type(1) {
-      article {
-        height: 100%;
-        // max-width: 500px;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        font-size: 0.6rem;
+    // first skills container contains all the images of the skills i know
+    #skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      
+      
+      .skills-wrapper {
         display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-
-        // background graients range
-
-        .skills-image:nth-of-type(1) {
-          background: linear-gradient(
-            -208deg,
-            rgba(0, 58, 103, 1) 53%,
-            rgba(198, 35, 104, 1) 100%
-          );
+        gap: 0.5rem;
+        
+        .skills-img {
+          height: 2rem;
         }
-
-        .skills-image:nth-of-type(2) {
-            background: rgba(0, 58, 103, 1);
-        }
-
-        .skills-image:nth-of-type(3) {
-            background: rgba(0, 58, 103, 1);
-        }
-
-        .skills-image:nth-of-type(4) {
-            background: linear-gradient(
-                208deg,
-                rgba(0, 58, 103, 1) 53%,
-                rgba(198, 35, 104, 1) 100%
-              );
-        }
-
-        .skills-image {
-          display: flex;
-          gap: 1rem;
-          justify-content: center;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-            rgba(0, 0, 0, 0.22) 0px 10px 10px;
-          border-radius: 0.5rem;
-          padding: 1rem;
-
-          .skills-container {
-            text-align: center;
-            padding: 0.5rem;
-          }
-
-          img {
-            max-width: 100%;
-            height: 50px;
-            width: 50px;
-            object-fit: cover;
-          }
-        }
+        
       }
-
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
+      
     }
 
-    .about-item:nth-of-type(2) {
-      color: white;
-      font-size: 1.5rem;
-      line-height: 1.5;
-
+    #skills:nth-of-type(2) {
+      max-width: 600px;
+      
       h1 {
-        font-size: clamp(2rem, 2.8rem, 3rem);
-        font-family: "Dancing Script";
         color: $primary;
-        text-shadow: -3px -1px 16px $primary;
+        border-bottom: $primary 2px solid;
+      }
+      
+      p {
+        line-height: 1.5;
       }
     }
+    
   }
 }
 
 .section-header {
-  color: $accent;
+  color: black;
   font-size: 1.5rem;
+  letter-spacing: 3px;
+  border-bottom: black 2px solid;
 }
 
 #projects {
