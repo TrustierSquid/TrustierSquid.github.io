@@ -251,13 +251,6 @@ html {
     }
   }
 
-  /* .hero-item:nth-of-type(2) {
-    align-self: center;
-    img {
-      width: min(300px, 150px);
-      opacity: 0.4;
-    }
-  } */
 }
 
 #hero-img {
@@ -381,7 +374,7 @@ html {
 
 #projects {
   z-index: 1;
-  min-height: 900px;
+  min-height: 600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -389,64 +382,56 @@ html {
   padding: 4rem;
   color: white;
   box-shadow: $primary 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+
+  #project-title {
+    color: $primary;
+    border-bottom: $primary 2px solid;
+    font-size: 2rem;
+    text-shadow: -3px -1px 16px $primary;
+  }
   
   #project-wrapper {
-    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    
-    #project-title {
-      color: $primary;
-        border-bottom: $primary 2px solid;
-        font-size: 2rem;
-        text-shadow: -3px -1px 16px $primary;
-      }
+    justify-content: space-between;
+  
+    #project-grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      padding: 2rem;
+      row-gap: 0.5rem;
+      column-gap: 0.5rem;
+      cursor: pointer;
       
-      #project-grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
-        padding: 2rem;
-        row-gap: 0.5rem;
-        column-gap: 0.5rem;
-      /* h1 {
-        font-size: 2.5rem;
-        color: $primary;
-        text-shadow: -3px -1px 16px $primary;
-        // border-bottom: $primary 2px solid;
-      } */
+    .project-section {
+      width: 200px;
+      height: 200px;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      transition: 450ms;
+      overflow: hidden;
 
       
-      
-      .project-section {
-        width: 200px;
-        height: 200px;
-        border-radius: 1rem;
-        padding: 1rem;
-        text-align: center;
-        position: relative;
-        transition: 450ms;
-        overflow: hidden;
-
+      &:hover {
+        width: 220px;
+        height: 220px;
         
-        &:hover {
-          width: 220px;
-          height: 220px;
-          
-          .projectIcon {
-            position: absolute;
-            left: 50px;
-            top: 50px;
-          }
-
+        .projectIcon {
+          position: absolute;
+          left: 50px;
+          top: 50px;
         }
 
-        .project-section::after {
-          
-        }
-        
       }
+        
+    }
 
       .projectIcon {
         transition: 450ms;
