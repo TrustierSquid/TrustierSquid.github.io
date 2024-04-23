@@ -15,7 +15,6 @@ i {
 }
 
 body {
-  background: -webkit-linear-gradient(90deg, #1b0b20, #2f0246);
   background: linear-gradient(90deg, #1b0b20, #2f0246);
 }
 
@@ -38,20 +37,22 @@ html {
 }
 
 #navbar {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #c62368;
   position: sticky;
   top: 0;
   z-index: 5;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   gap: 3rem;
+  background-color: #1d0a23;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 #navbar h2 {
+  font-size: 1.8rem;
   font-family: "Dancing Script";
+  text-shadow: -3px -1px 16px #c62368;
 }
 #navbar ul {
   display: flex;
@@ -59,7 +60,6 @@ html {
 }
 #navbar ul li {
   display: inline;
-  font-size: 1.2rem;
   color: #c41d1d;
   margin-inline: 1.2rem;
 }
@@ -136,16 +136,13 @@ html {
 #hero {
   display: flex;
   justify-content: space-around;
-  min-height: 800px;
+  min-height: 100vh;
   gap: 5%;
   color: white;
-  margin-top: 1%;
-  padding: 3rem;
-  /* // background swirl
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("svg/heroBG2.svg"); */
+  background-image: url("svg/hero.svg");
   /* .hero-item:nth-of-type(2) {
     align-self: center;
     img {
@@ -162,6 +159,7 @@ html {
   align-items: center;
   padding: 2rem;
   margin-inline: 2rem;
+  text-align: center;
 }
 #hero .hero-item:nth-of-type(1) h1#showcase {
   font-family: "Dancing Script";
@@ -180,14 +178,14 @@ html {
   height: 50px;
   width: 300px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  background: #566bf2;
+  background: #c62368;
 }
 #hero .hero-item:nth-of-type(1) #contact-btn a {
   text-decoration: none;
   color: white;
 }
 #hero .hero-item:nth-of-type(1) #contact-btn:hover {
-  background-color: #abc1ff;
+  background-color: #001220;
 }
 #hero .hero-item:nth-of-type(1) #stat-container {
   display: flex;
@@ -211,7 +209,8 @@ html {
 #hero-img {
   min-height: 500px;
   opacity: 0.9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 5px solid #c62368;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -225,6 +224,7 @@ html {
   background-size: cover;
   background-image: url("svg/blurry-gradient-haikei.svg");
   padding: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 #about #about-flex-wrapper {
   padding: 0.5rem;
@@ -241,7 +241,14 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
+}
+#about #about-flex-wrapper #skills .section-header {
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border-bottom: black 2px solid;
+  font-size: 1rem;
 }
 #about #about-flex-wrapper #skills .skills-wrapper {
   display: flex;
@@ -250,22 +257,32 @@ html {
 #about #about-flex-wrapper #skills .skills-wrapper .skills-img {
   height: 2rem;
 }
+#about #about-flex-wrapper #skills #group-buttons button {
+  color: white;
+  height: 2.5rem;
+  padding: 0.5rem;
+  background-color: #2f0246;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+#about #about-flex-wrapper #skills #group-buttons button:hover {
+  background-color: #c62368;
+  height: 2.6rem;
+}
 #about #about-flex-wrapper #skills:nth-of-type(2) {
   max-width: 600px;
 }
 #about #about-flex-wrapper #skills:nth-of-type(2) h1 {
   color: #c62368;
   border-bottom: #c62368 2px solid;
+  font-size: 2rem;
 }
 #about #about-flex-wrapper #skills:nth-of-type(2) p {
   line-height: 1.5;
-}
-
-.section-header {
-  color: black;
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  border-bottom: black 2px solid;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 #projects {
@@ -327,7 +344,8 @@ html {
 #projects #project-flex-wrapper #project-showcase-container .project-section img {
   width: 400px;
   border-radius: 1rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 1rem;
 }
 #projects #project-flex-wrapper #project-showcase-container .project-section .project-information {

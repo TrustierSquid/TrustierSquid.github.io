@@ -4,6 +4,8 @@ $secondary: #566bf2;
 $accent: #abc1ff;
 $backgroundSkill: #003a67;
 $background: #001220;
+$primaryPurple: #1d0a23;
+$secondaryPurple: #2e0245;
 
 * {
   margin: 0;
@@ -54,21 +56,23 @@ html {
 // NAVBAR
 
 #navbar {
-  font-size: max(1rem, 1.2rem);
+  font-size: max(0.6rem, 0.9rem);
   color: $primary;
   position: sticky;
   top: 0;
   z-index: 5;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   gap: 3rem;
+  background-color: #1d0a23;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
   h2 {
+    font-size: max(1.3rem, 1.8rem);
     font-family: "Dancing Script";
     // padding: 1rem;
+    text-shadow: -3px -1px 16px $primary;
   }
 
   ul {
@@ -78,7 +82,6 @@ html {
     li {
       display: inline;
       // padding: 1rem;
-      font-size: max(1rem, 1.2rem);
       color: #c41d1d;
       margin-inline: 1.2rem;
 
@@ -171,19 +174,16 @@ html {
 #hero {
   display: flex;
   justify-content: space-around;
-  min-height: 800px;
+  min-height: 100vh;
   gap: 5%;
   color: white;
-  margin-top: 1%;
-  // margin-bottom: 1%;
-  padding: 3rem;
 
   // ! BACKGROUND SWIRL IN QUESTION
-  /* // background swirl
+  // background swirl
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("svg/heroBG2.svg"); */
+  background-image: url("svg/hero.svg");
 
   // Flex item that contains the greeting and name
   .hero-item:nth-of-type(1) {
@@ -194,6 +194,7 @@ html {
     align-items: center;
     padding: 2rem;
     margin-inline: 2rem;
+    text-align: center;
 
     h1#showcase {
       font-family: "Dancing Script";
@@ -216,7 +217,7 @@ html {
         rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       // margin: 0 auto;
-      background: $secondary;
+      background: $primary;
 
       a {
         text-decoration: none;
@@ -224,7 +225,7 @@ html {
       }
 
       &:hover {
-        background-color: $accent;
+        background-color: $background;
       }
     }
 
@@ -287,7 +288,8 @@ html {
   background-size: cover;
   background-image: url("svg/blurry-gradient-haikei.svg");
   padding: 2rem;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  
   #about-flex-wrapper {
     padding: 0.5rem;
     display: flex;
@@ -305,8 +307,15 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-
+      gap: 0.8rem;
+      
+      .section-header {
+        color: black;
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        border-bottom: black 2px solid;
+        font-size: 1rem;
+      }
       
       
       .skills-wrapper {
@@ -318,6 +327,28 @@ html {
         }
         
       }
+
+      @mixin group-btns {
+        color: white;
+        height: 2.5rem;
+        padding: 0.5rem;
+        background-color: #2f0246;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: 250ms;
+
+        &:hover {
+          background-color: #c62368;
+          height: 2.6rem;
+        }
+      }
+
+      #group-buttons {
+        button {
+          @include group-btns;
+        }
+      }
       
     }
 
@@ -327,22 +358,19 @@ html {
       h1 {
         color: $primary;
         border-bottom: $primary 2px solid;
+        font-size: 2rem;
       }
       
       p {
         line-height: 1.5;
+        text-align: center;
+        font-size: 1.3rem;
       }
     }
     
   }
 }
 
-.section-header {
-  color: black;
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  border-bottom: black 2px solid;
-}
 
 #projects {
   z-index: 2;
