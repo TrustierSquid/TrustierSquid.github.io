@@ -56,7 +56,7 @@
     <!-- Hero Section -->
     <header id="hero">
         <div class="hero-item">
-            <h1 id="showcase">My Name is Sam 😁</h1>
+            <h1 id="showcase">My Name is Samuel 😁</h1>
             <p id="showcase-desc">My name is Samuel Hunt, a hardworking and dedicated Front-End-Developer <br> based in
                 Westland Michigan. 📍</p>
             <!-- cantact button and container contains github and linkedin and youtube -->
@@ -74,7 +74,7 @@
         <div id="about-flex-wrapper">
             <!-- Title will sit on top of all of the skills that i know -->
             <!-- Going a for a minimalistic approach -->
-            <div id="skills">
+            <div class="skills">
                 <h1 class="section-header">TECHNOLOGIES THAT I KNOW</h1>
                 <section class="skills-wrapper">
                     <img class="skills-img" src="./src/assets/imgs/mycollection/png/009-git.png" alt="#">
@@ -94,14 +94,15 @@
                     <img class="skills-img" src="./src/assets/imgs/mycollection/png/github.png" alt="#">
                     <img class="skills-img" src="./src/assets/imgs/mycollection/png/006-js.png" alt="#">
                     <img class="skills-img" src="./src/assets/imgs/mycollection/png/003-typescript.png" alt="#">
+                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/python.png" alt="#">
                 </section>
                 <div id="group-buttons">
                     <button>SEE GITHUB</button>
                     <button>SEE PROJECTS</button>
                 </div>
             </div>
-            <div id="skills">
-                <h1>ABOUT ME</h1>
+            <div class="skills">
+                <h1>ABOUT ME 🏠</h1>
                     <div>
                         <!-- <h3>Front-End-Developer based in Westland, Michigan 📍</h3> -->
                         <p>I'm a Junior Front-End Developer that has a keen eye for a smooth user experience. I excel in
@@ -113,8 +114,6 @@
                         </p>
                     </div>
             </div>
-
-            
         </div>
     </section>
 
@@ -125,71 +124,31 @@
     <!-- Jazz site -->
 
     <section id="projects">
-        <div>
-            <div id="project-flex-wrapper">
-                <h1 class="project-header">PORTFOLIO</h1>
-                <!-- Flex container -->
-                <div id="project-showcase-container">
-                    <!-- sub header for projects -->
-                    <h1>My Projects 💻</h1>
-
-                    <!-- flex container -->
-                    <section class="project-section">
-                        <div class="project-information">
-                            <h3>SuperSet Gym</h3>
-                            <p>Gym Website that was made with SASS and TypeScript. Also crafted with a module bundler known as Parcel.</p>
-                                <!-- tools used -->
-                            <div class="project-notes">
-                                <span class="tools-used">SCSS</span>
-                                <span class="tools-used">TypeScript</span>
-                                <span class="tools-used"><a href="https://github.com/TrustierSquid/SuperSetGym">See Code</a></span>
-                            </div>
-                        </div>
-                        <img src="/src/assets/imgs/supersetSS.png" alt="">
-                    </section>
-                    <section class="project-section">
-                        <img src="/src/assets/imgs/mycollection/png/download (1).jfif" alt="">
-
-                        <div class="project-information">
-                            <h3>Blogathon</h3>
-                            <p>Blog Site made with React combined with SASS. Users can post and update the Blog in real time. </p>
-                                <!-- tools used -->
-                            <div class="project-notes">
-                                <span class="tools-used">SCSS</span>
-                                <span class="tools-used">React</span>
-                                <!-- <span class="tools-used" class="github-travel"><a href=""></a>See Code</span> -->
-
-                            </div>
-                        </div>
-                    </section>
-                    <section class="project-section">
-                        <div class="project-information">
-                            <h3>Dirty Dog Jazz Club</h3>
-                            <p>This jazz club site contains all of the latest and greatest jazz music showcasing in hero-like front page.</p>
-                                <!-- tools used -->
-                            <div class="project-notes">
-                                <span class="tools-used">React</span>
-                                <span class="tools-used">Vanilla CSS</span>
-                                <!-- <span class="tools-used" class="github-travel">See Code</span> -->
-
-                            </div>
-                        </div>
-                        <img src="/src/assets/imgs/mycollection/png/download (1).jfif" alt="">
-
-                    </section>
-                </div>
+        <div id="project-wrapper">
+            <!-- Flex container -->
+            <h1 id="project-title">PROJECTS 💻</h1>
+            <div id="project-grid-container">
+                <!-- sub header for projects -->
+                
+                <!-- flex container -->
+                <section class="project-section">
+                    <h1>SuperSet Gym</h1>
+                    <img src="src/assets/imgs/mycollection/png/gymIcon.png" alt="">
+                </section>
+                <section class="project-section">
+                    <h1>Dirty Dog Jazz Club</h1>
+                    <img class="projectIcon" src="/src/assets/imgs/Dirty-Dog-Jazz-Cafe.png" alt="Picture">
+                </section>
+                <section class="project-section">
+                    <h1>MELOETTA</h1>
+                    <img class="projectIcon"src="/src/assets/imgs/meloetta.png" alt="">
+                </section>
+            </div>
+            <div>
+                
             </div>
         </div>
-        <footer>
-            <p>&copy; All rights reserved.</p>
-            <div>
-                <button class="social-media"><i class="icofont-instagram"><a href="#"></a></i></button>
-                <button class="social-media"><i class="icofont-twitter"><a href="#"></a></i></button>
-                <button class="social-media"><img src="/src/assets/imgs/mycollection/png/002-linkedin.png" alt=""></button>
-            </div>
-        </footer>
     </section>
-    <section id="footerBG"></section>
 
 </body>
 

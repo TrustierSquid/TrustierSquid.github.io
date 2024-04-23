@@ -1,0 +1,9 @@
+SuperSet Gym
+Gym Website that was made with SASS and TypeScript. Also crafted with a module bundler known as Parcel.
+
+
+Blogathon
+Blog Site made with React combined with SASS. Users can post and update the Blog in real time. 
+
+Dirty Dog Jazz Club
+This jazz club site contains all of the latest and greatest jazz music showcasing in hero-like front page.
