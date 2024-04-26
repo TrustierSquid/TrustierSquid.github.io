@@ -278,12 +278,13 @@ html {
   justify-content: center;
   align-items: center;
   max-height: 100%;
-  background-repeat: no-repeat;
+/*   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("svg/blurry-gradient-haikei.svg");
+  background-image: url("svg/blurry-gradient-haikei.svg"); */
   padding: 2rem;
-  box-shadow: $primary 102px 22px 100px 100px;
+  // box-shadow: $primary 10px 22px 20px 30px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
   
   #about-flex-wrapper {
@@ -294,7 +295,7 @@ html {
     align-items: center;
     margin: 3rem auto;
     width: 85vw;
-    gap: 5rem;
+    gap: 7rem;
     color: white;
     // margin-top: 10%;
 
@@ -306,10 +307,10 @@ html {
       gap: 0.8rem;
       
       .section-header {
-        color: black;
+        color: $primary;
         font-size: 1.5rem;
         letter-spacing: 3px;
-        border-bottom: black 2px solid;
+        border-bottom: $primary 2px solid;
         font-size: 1rem;
       }
       
@@ -352,19 +353,19 @@ html {
     }
     
     .skills:nth-of-type(2) {
-      width: min(600px, 700px);
       
       h1 {
         color: $primary;
         border-bottom: $primary 2px solid;
         font-size: 2rem;
-        text-shadow: -3px -1px 16px $primary;
+        // text-shadow: -3px -1px 16px $primary;
       }
       
       p {
         line-height: 1.5;
         text-align: center;
         font-size: 1.3rem;
+        max-width: 600px;
       }
     }
     
@@ -375,94 +376,76 @@ html {
 #projects {
   z-index: 1;
   min-height: 600px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("./svg/stacked-waves-haikei.svg");
-  padding: 4rem;
+  padding: 1rem;
   color: white;
-  box-shadow: $primary 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(88,4,131);
+  background: linear-gradient(170deg, rgba(88,4,131,1) 0%, rgba(2,47,82,1) 100%); 
 
   #project-title {
     color: $primary;
     border-bottom: $primary 2px solid;
     font-size: 2rem;
     text-shadow: -3px -1px 16px $primary;
+    align-self: center;
   }
   
   #project-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
+    
     #project-grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       justify-items: center;
-      padding: 2rem;
+      // padding: 1rem;
       row-gap: 0.5rem;
       column-gap: 0.5rem;
-      cursor: pointer;
       
-    .project-section {
-      width: 200px;
+      .project-section {
+      max-width: max(700px, 300px);
+      // min-height: 250px;
+      max-height: max(400px, 500px);
       height: 200px;
       border-radius: 1rem;
       padding: 1rem;
-      text-align: center;
+      text-align: left;
       position: relative;
       transition: 450ms;
       overflow: hidden;
-
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      background-color: $primaryPurple;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 3px solid $primary;
       
-      &:hover {
-        width: 220px;
-        height: 220px;
-        
-        .projectIcon {
-          position: absolute;
-          left: 50px;
-          top: 50px;
+      button {
+        height: 70px;
+        width: 70px;
+        color: rgb(72, 173, 255);
+        border: none;
+        border-radius: 0.3rem;
+        background: none;
+        cursor: pointer;
+        transition: 250ms;
+        &:hover {
+          color: $primary;
         }
-
       }
+      
+      .madeWithIcon {
+        align-self: end;
         
+        
+        img {
+          height: 30px;
+          width: 30px;
+        }
+        
+      }
     }
 
-      .projectIcon {
-        transition: 450ms;
-        position: absolute;
-        left: 50px;
-        top: 100px;
-      }
-      
-      .project-section:nth-of-type(1){
-        background: rgb(2,0,36);
-        background: linear-gradient(170deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 54%, rgba(0,212,255,1) 100%); 
-        box-shadow: rgba(9,9,121,1) 0px 20px 30px -10px;
-        color: white;
-      }
-      
-      .project-section:nth-of-type(2){
-        background: rgb(131,58,180);
-        background: linear-gradient(174deg, rgba(131,58,180,1) 0%, rgba(255,34,34,1) 50%, rgba(252,176,69,1) 100%); 
-        box-shadow: rgba(255,34,34,1) 0px 20px 30px -10px;
-      }
-
-      
-      .project-section:nth-of-type(3){
-        box-shadow: rgba(152,150,241,1) 0px 20px 30px -10px;
-        background: rgb(142,246,228);
-        background: linear-gradient(174deg, rgba(142,246,228,1) 0%, rgba(152,150,241,1) 50%, rgba(213,155,246,1) 100%); 
-        color: white;
-        position: relative;
-
-
-      }
       
       
     }
@@ -634,13 +617,6 @@ footer {
         
       }
 
-      .skills:nth-of-type(2){
-        div {
-          p {
-            color: rgb(0, 225, 255);
-          }
-        }
-      }
 
       .about-item:nth-of-type(2) {
         display: flex;
@@ -666,26 +642,28 @@ footer {
   // PROJECT RESPONSIVENESS
 
   #projects {
+    flex-direction: column;
+    padding: 1.5rem;
+    #project-title {
+      align-self: center;
+    }
+
     #project-wrapper {
-      flex-direction: column;
+
+      #project-grid-container {
+        .project-section {
+          font-size: 0.9rem;
+        }
+      }
+      
     }
 
   }
-
-  // footer responsiveness
 
   
 }
 
 @media (max-width: 500px) {
-  #projects{
-    #project-wrapper {
-      #project-grid-container {
-        grid-template-columns: 1fr;
-        padding: 4rem;
-      }
-    }
-  }
   #about {
     #about-flex-wrapper {
       .skills {
@@ -697,6 +675,17 @@ footer {
       }
     }
   }
+
+  #hero {
+    .hero-item:nth-child(1) {
+      #stat-container {
+        flex-direction: column;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 640px) {
@@ -704,7 +693,7 @@ footer {
     #project-wrapper {
       #project-grid-container {
         grid-template-columns: 1fr, 1fr;
-        padding: 4rem;
+        padding: 1.5rem;
       }
     }
   }
