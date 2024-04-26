@@ -15,6 +15,7 @@ i {
 }
 
 body {
+  background: -webkit-linear-gradient(90deg, #1b0b20, #2f0246);
   background: linear-gradient(90deg, #1b0b20, #2f0246);
 }
 
@@ -160,6 +161,9 @@ html {
   font-size: 5rem;
   text-shadow: -3px -1px 16px #c62368;
 }
+#hero .hero-item:nth-of-type(1) img {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 #hero .hero-item:nth-of-type(1) #contact-btn {
   padding: 1rem;
   font-size: 1.2rem;
@@ -172,6 +176,7 @@ html {
   width: 300px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   background: #c62368;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 #hero .hero-item:nth-of-type(1) #contact-btn a {
   text-decoration: none;
@@ -202,8 +207,7 @@ html {
 #hero-img {
   min-height: 500px;
   opacity: 0.9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 5px solid #c62368;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -221,6 +225,8 @@ html {
     background-image: url("svg/blurry-gradient-haikei.svg"); */
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background: rgb(84, 2, 126);
+  background: linear-gradient(90deg, rgb(84, 2, 126) 0%, rgb(29, 10, 35) 100%);
 }
 #about #about-flex-wrapper {
   padding: 0.5rem;
@@ -258,15 +264,20 @@ html {
   color: white;
   height: 2.5rem;
   padding: 0.5rem;
-  background-color: #2f0246;
+  background-color: #c62368;
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
   transition: 250ms;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 #about #about-flex-wrapper .skills #group-buttons button:hover {
-  background-color: #c62368;
+  background-color: #566bf2;
   height: 2.6rem;
+}
+#about #about-flex-wrapper .skills #group-buttons button a {
+  text-decoration: none;
+  color: white;
 }
 #about #about-flex-wrapper .skills:nth-of-type(2) h1 {
   color: #c62368;
@@ -288,14 +299,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: rgb(88, 4, 131);
-  background: linear-gradient(170deg, rgb(88, 4, 131) 0%, rgb(2, 47, 82) 100%);
+  background: rgb(29, 1, 43);
+  background: linear-gradient(90deg, rgb(29, 1, 43) 0%, rgb(127, 53, 150) 100%);
 }
 #projects #project-title {
   color: #c62368;
   border-bottom: #c62368 2px solid;
   font-size: 2rem;
-  text-shadow: -3px -1px 16px #c62368;
   align-self: center;
 }
 #projects #project-wrapper #project-grid-container {
@@ -303,8 +313,7 @@ html {
   flex-direction: column;
   justify-items: center;
   row-gap: 0.5rem;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
 }
 #projects #project-wrapper #project-grid-container .project-section {
   max-width: 700px;
@@ -332,6 +341,10 @@ html {
   background: none;
   cursor: pointer;
   transition: 250ms;
+}
+#projects #project-wrapper #project-grid-container .project-section button a {
+  text-decoration: none;
+  color: #566bf2;
 }
 #projects #project-wrapper #project-grid-container .project-section button:hover {
   color: #c62368;
