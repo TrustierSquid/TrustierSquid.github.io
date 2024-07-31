@@ -1,119 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Resources:
         
         Haikei: Custom SVG patterns for UI desgin
         Realtime colors: for finding the perfect color scheme
         
      -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Hunt | Portfolio</title>
-    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
-    <link rel="stylesheet" href="src/assets/styles/styles.css">
-    <link rel="stylesheet" href="src/icofont/icofont.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/assets/styles/styles.css" />
+    <link rel="stylesheet" href="src/icofont/icofont.css" />
 
     <!-- scripts -->
     <script type="module" src="src/assets/scripts/navbarFunction.js"></script>
     <script type="module" src="/src/assets/scripts/buttonFunctions.js"></script>
+    <script defer src="https://kit.fontawesome.com/6ab760c0b1.js" crossorigin="anonymous"></script>
+  </head>
 
-</head>
-
-<body>
-    <div id="heroBG"></div>
+  <body>
 
     <nav id="navbar">
-        <h2>Samuel Hunt</h2>
+    <!-- Desktop Nav Bar -->
         <ul id="nav-list">
             <li><a href="#about-info">About me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
-
-        <button id="mobile-nav-btn">
-            <i class="icofont-navigation-menu"></i>
-        </button>
-        <button id="mobile-nav-exit">
-            <i class="icofont-brand-nexus"></i>
-        </button>
+        <!-- initially disabled until viewport shrinks to mobile sizes -->
+      <button id="mobile-nav-btn">
+        <i class="icofont-navigation-menu"></i>
+      </button>
+      <button id="mobile-nav-exit">
+        <i class="icofont-brand-nexus"></i>
+      </button>
     </nav>
 
     <!-- Mobile nav menu -->
     <nav id="mobile-nav-menu">
-        <br>
-        <ul>
-            <li>Menu</li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <br />
+      <ul>
+        <li>NAV</li>
+        <li><a href="#" class="mobileNavLinks">About me</a></li>
+        <li><a href="#" class="mobileNavLinks">Projects</a></li>
+        <li><a href="#" class="mobileNavLinks">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Hero Section -->
     <header id="hero">
-        <div class="hero-item">
-            <h1 id="showcase">Hello, I'm Samuel</h1>
-            <p id="showcase-desc">A hardworking and dedicated Front-End-Developer <br> based in
-                Westland Michigan. 📍</p>
-            <!-- cantact button and container contains github and linkedin and youtube -->
-            <div id="stat-container">
-                <img src="./src/assets/imgs/mycollection/png/001-github.png" alt="#" id="hero-github">
-                <img src="./src/assets/imgs/mycollection/png/002-linkedin.png" alt="#" id="hero-linkedin">
-                <button id="contact-btn">My Projects</button>
-            </div>
+      <div class="hero-item">
+        <span class="designAspect">
+            <img src="/src/assets/imgs/design2.png" alt="">
+        </span>
+        <span class="designAspect">
+            <img src="/src/assets/imgs/design2.png" alt="">
+        </span>
+        
+        <h1 id="showcase"><span style="color: white">Hello, I'm </span>Samuel</h1>
+        <h4>FRONTEND  DEVELOPER</h4>
+        <p id="showcase-desc">
+            I create and code elegantly simple designs, and I'm passionate about my work.<br />
+        </p>
+        <!-- cantact button and container contains github and linkedin and youtube -->
+        <div id="stat-container">
+          <button id="hero-github"><i class="fa fa-github"></i></button>
+          <button id="hero-linkedin"><i class="fa fa-linkedin"></i></button>
+          <button id="contact-btn">My Projects</button>
         </div>
+      </div>
 
+      <div class="hero-item">
+        <!-- <span class="designAspect"></span> -->
+        <span class="designAspect">
+            <img src="/src/assets/imgs/design1.png" alt="">
+            <!-- <img src="/src/assets/imgs/horizontalLine.png" alt=""> -->
+        </span>
 
-
+        <!-- img that goes on top the designs -->
+        <span class="shadow">
+            <img src="/src/assets/imgs/codeSS.png" alt="">
+        </span>
+      </div>
+      
     </header>
     <section id="about">
-        <div id="about-flex-wrapper">
-            <!-- Title will sit on top of all of the skills that i know -->
-            <!-- Going a for a minimalistic approach -->
-            <div class="skills">
-                <h1 class="section-header">TECHNOLOGIES THAT I KNOW</h1>
-                <section class="skills-wrapper">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/009-git.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/005-html.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/004-css-3.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/less-than.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/007-sass.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/001-bootstrap.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/001-photoshop.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/002-figma.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/008-atom.png" alt="#">
-                </section>
-                <section class="skills-wrapper">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/002-node-js.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/tux.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/bash.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/github.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/006-js.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/003-typescript.png" alt="#">
-                    <img class="skills-img" src="./src/assets/imgs/mycollection/png/python.png" alt="#">
-                </section>
-                <div id="group-buttons">
-                    <button>SEE GITHUB</button>
-                    <button>SEE PROJECTS</button>
-                </div>
-            </div>
-            <div class="skills">
-                <h1>ABOUT ME</h1>
-                    <div>
-                        <p>I'm a Front-End Developer that has a keen eye for a smooth user experience. I excel in
-                            creating, designing and maintaining
-                            responsive websites. My craft lies in developing smooth, engaging and intriging interfaces through
-                            writing optimized and clean code, utilizing
-                            the currently existing bleeding-edge technology. I am a team player that revels in collaborating
-                            with other developers.
-                        </p>
-                    </div>
-            </div>
+      <div id="about-flex-wrapper">
+        <!-- Title will sit on top of all of the skills that i know -->
+        <!-- Going a for a minimalistic approach -->
+        <div class="skills">
+          <h1 class="section-header">MY EXPERTISE</h1>
+          <br>
+          <h5>CORE TECHNOLOGIES</h5>
+          <section class="skills-wrapper">
+            <span>JavaScript <i class="fa-brands fa-js"></i></span>
+            <span>React <i class="fa-brands fa-react"></i></span>
+            <span>NodeJS <i class="fa-brands fa-node-js"></i></span>
+            <span>SCSS <i class="fa-brands fa-sass"></i></span>
+
+          </section>
+          <h5>OTHERS:</h5>
+          <section class="skills-wrapper">
+            <span>Bootstrap <i class="fa-brands fa-bootstrap"></i></span>
+            <span>Figma <i class="fa-brands fa-figma"></i></span>
+            <span>Python <i class="fa-brands fa-python"></i></span>
+            <span>GIT <i class="fa-brands fa-git-alt"></i></span>
+          </section>
+
         </div>
+        <div class="skills">
+          <h1>ABOUT ME</h1>
+          <div>
+            <p>
+              I'm a Front-End Developer that has a keen eye for a smooth user
+              experience. I excel in creating, designing and maintaining
+              responsive websites. My craft lies in developing smooth, engaging
+              and intriging interfaces through writing optimized and clean code,
+              utilizing the currently existing bleeding-edge technology. I am a
+              team player that revels in collaborating with other developers.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects will consist of  -->
@@ -123,47 +143,56 @@
     <!-- Jazz site -->
 
     <section id="projects">
-        <h1 id="project-title">PROJECTS</h1>
-        <div id="project-wrapper">
-            <!-- Flex container -->
-            <div id="project-grid-container">
-                <!-- sub header for projects -->
-                
-                <!-- flex container -->
-                <section class="project-section">
-                    <h1>SuperSet Fitness</h1>
-                    <p>Gym Website that was made with SASS and TypeScript. Also crafted with a module bundler known as Parcel.</p>
-                    <button>See code</button>
-                    <div class="madeWithIcon">
-                        <img src="src/assets/imgs/mycollection/png/005-html.png" alt="">
-                        <img src="src/assets/imgs/mycollection/png/007-sass.png" alt="">
-                        <img src="src/assets/imgs/mycollection/png/006-js.png" alt="">
-                    </div>
-                </section>
-                <section class="project-section">
-                    <h1>Dirty Dog Jazz Club</h1>
-                    <p>This jazz club site contains all of the latest and greatest jazz music showcasing in hero-like front page.</p>
-                    <button>See code</button>
-                    <div class="madeWithIcon">
-                        <img src="src/assets/imgs/mycollection/png/005-html.png" alt="">
-                        <img src="src/assets/imgs/mycollection/png/007-sass.png" alt="">
-                        <img src="src/assets/imgs/mycollection/png/003-typescript.png" alt="">
-                    </div>
-                    
-                </section>
-                <section class="project-section">
-                    <h1>MELOETTA</h1>
-                    <p>Discord Musical made in Python. Turns Youtube links into Mp3/Mp4 files</p>
-                    <button>See code</button>
-                    <div class="madeWithIcon">
-                        <img src="src/assets/imgs/mycollection/png/python.png" alt="">
-                    </div>
-                </section>
+      <h1 id="project-title">PROJECTS</h1>
+      <div id="project-wrapper">
+        <section class="project-item">
+            <!-- First Section of the card -->
+            <div class="cardSection">
+                <img src="/src/assets/imgs/pokedex.png" alt="">
+                <h2>POKEDEX</h2>
+                <p>The frontend is served with a custom API, from the backend using expressJS.</p>
+                <p>This project gives you a catalog of different pokemon based on the type that you select.</p>
+                <br>
+                <h5>TECHNOLOGIES USED -</h5>
+                <div class="techUsed">
+                    <br>
+                    <span>React <i class="fa-brands fa-react"></i></span>
+                    <span>Sass <i class="fa-brands fa-sass"></i></span>
+                    <span>Node <i class="fa-brands fa-node-js"></i></span>
+                    <br>
+                    <br>
+                    <span>ExpressJS</span>
+                </div>
             </div>
-        </div>
+
+            <!-- second section of the card -->
+            <div class="cardSection">
+                <button>See Code</button>
+                <button>Live Demo</button>
+            </div>
+        </section>
+        <section class="project-item">
+            <!-- First Section of the card -->
+            <div class="cardSection">
+                <img src="/src/assets/imgs/supercenter.png" alt="">
+                <h2>ECOMMERCE SITE</h2>
+                <p>Standard Ecommerce landing page template targeting small mom and pop shops. Made with just react/sass.</p>
+                <br>
+                <h5>TECHNOLOGIES USED -</h5>
+                <div class="techUsed">
+                    <br>
+                    <span>React <i class="fa-brands fa-react"></i></span>
+                    <span>Sass <i class="fa-brands fa-sass"></i></span>
+                </div>
+            </div>
+
+            <!-- second section of the card -->
+            <div class="cardSection">
+                <button>See Code</button>
+                <button>Live Demo</button>
+            </div>
+        </section>
+      </div>
     </section>
-
-</body>
-
+  </body>
 </html>
-

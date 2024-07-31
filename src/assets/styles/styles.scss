@@ -24,8 +24,8 @@ i {
 }
 
 body {
-  // background-color: $background;
-  background: -webkit-linear-gradient(90deg, #1b0b20,#2f0246);background: linear-gradient(90deg, #1b0b20,#2f0246);
+  background-color: #252525;
+
 }
 
 html {
@@ -57,27 +57,38 @@ html {
 
 #navbar {
   font-size: max(0.6rem, 0.9rem);
-  color: $primary;
-  position: sticky;
+  color: white;
+  position: fixed;
+  width: 100vw;
   top: 0;
   z-index: 5;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: end;
   padding: 1.5rem;
   gap: 3rem;
-  background-color: #1d0a23;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: 250ms;
+  animation-name: lockInPlace;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+
+  
 
   h2 {
     font-size: max(1.3rem, 1.8rem);
-    font-family: "Dancing Script";
+    // font-family: "Dancing Script";
     // padding: 1rem;
     text-shadow: -3px -1px 16px $primary;
   }
 
-  ul {
+  #nav-list {
     display: flex;
     align-items: center;
+    background: rgb(198,35,104);
+    background: linear-gradient(208deg, rgba(198,35,104,1) 36%, rgba(86,107,242,1) 100%); 
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
     li {
       display: inline;
@@ -91,7 +102,7 @@ html {
         transition: 250ms;
 
         &:hover {
-          color: $accent;
+          color: $background;
         }
       }
     }
@@ -120,7 +131,7 @@ html {
 #mobile-nav-menu {
   height: 100vh;
   overflow: hidden;
-  background-color: $background;
+  background-color: #333;
   font-size: 2rem;
   top: 100px;
   z-index: 4;
@@ -130,7 +141,7 @@ html {
 
   ul {
     li {
-      color: yellow;
+      color: $primary;
       list-style-type: none;
       padding: 1.5rem;
 
@@ -173,34 +184,121 @@ html {
 
 #hero {
   display: flex;
-  justify-content: space-around;
-  min-height: 100vh;
+  justify-content: center;
   gap: 5%;
+  min-height: 80vh;
   color: white;
+  background-color: #252525;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-  // ! BACKGROUND SWIRL IN QUESTION
-  // background swirl
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("svg/hero.svg");
 
   // Flex item that contains the greeting and name
   .hero-item:nth-of-type(1) {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    gap: 1.5rem;
+    align-items: start;
     padding: 2rem;
     margin-inline: 2rem;
-    text-align: center;
+    text-align: left;
+    
 
+    
+
+    // design (3 dots) in the first hero item
+    .designAspect {pointer-events: none; z-index: -0;}
+    .designAspect:nth-of-type(1) {
+      position: absolute;
+      opacity: 0.5;
+      left: 0;
+      top: 10%;
+
+      animation-name: breathe;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate-reverse;
+      
+      
+      // desgin img
+      img {
+        height: 100px;
+      }
+    }
+    
+    // desgin (3 dots) in the first hero item
+    .designAspect:nth-of-type(2) {
+      position: absolute;
+      opacity: 0.5;
+      left: 0;
+      bottom: 10%;
+      transition: 150ms;
+      
+      animation-name: breathe;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate-reverse;
+      
+      // desgin img
+      img {
+        height: 100px;
+        transform: rotate(90deg);
+      }
+    }
+    
+    // setting up animations for the 2 desgin items
+    @keyframes breathe {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-15%);
+      }
+    }
+    
+    // hero title
     h1#showcase {
-      font-family: "Dancing Script";
+      // font-family: "Dancing Script";
       color: $primary;
       font-size: 5rem;
       text-shadow: -3px -1px 16px $primary;
+      font-weight: bolder;
+      animation-name: lockInPlace;
+      animation-duration: 1s;
+      z-index: 3;
+      
+      span {
+        text-shadow: none;
+      }
+    }
+
+    // subtitle
+    h4 {
+      color: $primary;
+      letter-spacing: 3px;
+      animation-name: lockInPlace;
+      animation-duration: 1s;
+    }
+
+    // hero description
+    #showcase-desc {
+      animation-name: lockInPlace;
+      animation-duration: 1s;
+    }
+
+    // animation for hero TITLE
+    @keyframes lockInPlace {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     #contact-btn {
@@ -209,14 +307,11 @@ html {
       border: none;
       border-radius: 0.5rem;
       color: white;
-      transition: 250ms;
+      transition: 150ms;
       cursor: pointer;
       height: 50px;
       width: 300px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      // margin: 0 auto;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       background: $primary;
 
       a {
@@ -226,6 +321,8 @@ html {
 
       &:hover {
         background-color: $background;
+        transform: translateY(-5px);
+
       }
     }
 
@@ -233,66 +330,96 @@ html {
       display: flex;
       flex-direction: row;
       gap: 1.5rem;
+      z-index: 3;
 
-      img {
-        height: 50px;
+      #hero-github, #hero-linkedin {
         cursor: pointer;
         background-color: $primary;
-        padding: 0.3rem;
+        padding: 0.5rem;
+        border: none;
         border-radius: 0.3rem;
         background: rgb(198, 35, 104);
         transition: 250ms;
+        font-size: 2rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 
         &:hover {
-          background-color: $accent;
-          height: 55px;
+          background-color: $background;
+          transform: translateY(-5px);
+          color: white;
         }
       }
     }
   }
 
-}
+  .hero-item:nth-of-type(2) {
+    align-self: center;
+    opacity: 0.7;
+    border: 2px solid $primary;
+    background-color: $primary;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    position: relative;   
+    
 
-#hero-img {
-  min-height: 500px;
-  opacity: 0.9;
-  object-fit: cover;
-  // border-radius: 15% 35%;
-  // transform: skew(-10deg);
-  border: 5px solid $primary;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    .designAspect:nth-of-type(1) {
+      position: absolute;
+      z-index: 0;
+      left: -10%;
+      top: -15%;
+      
+
+      // design image (9 dots)
+      img {
+        height: 100px;
+        opacity: 0.7;
+      }
+    }
+    
+    .shadow {
+      position: relative;
+      
+      // code image
+      img {
+        // border: 2px solid $primary;
+        border: 2px solid $primary;
+        border-radius: 0.7rem;     
+        position: relative;
+        left: -20px;
+        top: -20px;
+        object-fit: cover;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+        
+      }
+    }
+    
+    
   }
-  
+
+}
 
   
   // about section
   #about {
   z-index: 5;
-  aspect-ratio: 960/300;
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 100%;
-/*   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url("svg/blurry-gradient-haikei.svg"); */
-  padding: 2rem;
-  // box-shadow: $primary 10px 22px 20px 30px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background: rgb(198,35,104);
+  background: linear-gradient(139deg, rgba(198,35,104,1) 36%, rgba(86,107,242,1) 100%); 
 
+  padding: 2rem;
+  box-shadow: $primary 10px 22px 20px 30px;
+  // box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   
   #about-flex-wrapper {
     padding: 0.5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     margin: 3rem auto;
     width: 85vw;
-    gap: 7rem;
     color: white;
     // margin-top: 10%;
 
@@ -301,27 +428,38 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1.3rem;
       
       .section-header {
-        color: $primary;
-        font-size: 1.5rem;
+        color: white;
         letter-spacing: 3px;
-        border-bottom: $primary 2px solid;
         font-size: 1rem;
       }
       
+      // skills container label
+      h5 {
+        align-self: start;
+      }
       
       .skills-wrapper {
+        
         display: flex;
         gap: 0.5rem;
-        
-        .skills-img {
-          height: 2.5rem;
-          transition: 250ms;
+        align-items: center;
+        align-self: start;
+ 
+        span {
+          padding: 0.5rem;
+          border-radius: 1rem;
+          background-color: $secondary;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          transition: 150ms;
+          white-space: nowrap;
           
+          &:hover {
+            transform: translateY(-5px);
+          }
         }
-        
         
       }
 
@@ -336,8 +474,8 @@ html {
         transition: 250ms;
         
         &:hover {
-          background-color: #c62368;
-          height: 2.6rem;
+          background-color: $background;
+          color: $primary;
         }
       }
       
@@ -349,12 +487,14 @@ html {
       
     }
     
+    // second skills container contains all the images of the skills i want to learn
     .skills:nth-of-type(2) {
       
       h1 {
-        color: $primary;
-        border-bottom: $primary 2px solid;
+        color: white;
         font-size: 2rem;
+        letter-spacing: 3px;
+
         // text-shadow: -3px -1px 16px $primary;
       }
       
@@ -378,76 +518,100 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: rgb(88,4,131);
-  background: linear-gradient(170deg, rgba(88,4,131,1) 0%, rgba(2,47,82,1) 100%); 
+  background-color: #171717;
+  gap: 3rem;
+
+  #project-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    
+    
+    .project-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4rem;
+      background: rgba(64, 64, 64, 0.7);
+      border: $primary 2px solid;
+      line-height: 1.5;
+      min-height: 600px;
+      max-width: 650px;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: rgba(198, 35, 103, 0.616) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+
+
+      .cardSection:nth-of-type(1){
+        // car title
+        h2 {
+          color: pink;
+  
+        }
+
+        p {
+          color: rgb(231, 231, 231);
+        }
+        h5 {
+          color: pink;
+        }
+  
+        // icons for the cards
+        .techUsed {
+          
+          span {
+            font-size: 0.8rem;
+            background-color: $secondary;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            
+          }
+        }
+        
+        img {
+          border: 2px solid $primary;
+          margin: 0.5rem 0rem;
+          border-radius: 1rem;
+          box-shadow: rgba(228, 67, 217, 0.34) 0px 20px 30px -10px;
+        }
+        
+      }
+
+      .cardSection:nth-of-type(2) {
+        button {
+          padding: 1rem;
+          background-color: $primary;
+          border: none;
+          color: white;
+          border-radius: 0.5rem;
+          margin-right: 1rem;
+          cursor: pointer;
+          transition: 150ms;
+          
+          &:hover {
+            background-color: $secondaryPurple;
+          }
+        }
+        // project title
+      }
+
+
+    }
+  }
 
   #project-title {
     color: $primary;
-    border-bottom: $primary 2px solid;
+    letter-spacing: 3px;
+
     font-size: 2rem;
-    text-shadow: -3px -1px 16px $primary;
+    // text-shadow: -3px -1px 16px $primary;
     align-self: center;
   }
   
-  #project-wrapper {
-    
-    #project-grid-container {
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      // padding: 1rem;
-      row-gap: 0.5rem;
-      column-gap: 0.5rem;
-      
-      .project-section {
-      max-width: max(700px, 300px);
-      // min-height: 250px;
-      max-height: max(400px, 500px);
-      height: 200px;
-      border-radius: 1rem;
-      padding: 1rem;
-      text-align: left;
-      position: relative;
-      transition: 450ms;
-      overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-      background-color: $primaryPurple;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      border-bottom: 3px solid $primary;
-      
-      button {
-        height: 70px;
-        width: 70px;
-        color: rgb(72, 173, 255);
-        border: none;
-        border-radius: 0.3rem;
-        background: none;
-        cursor: pointer;
-        transition: 250ms;
-        &:hover {
-          color: $primary;
-        }
-      }
-      
-      .madeWithIcon {
-        align-self: end;
-        
-        
-        img {
-          height: 30px;
-          width: 30px;
-        }
-        
-      }
-    }
-
-      
-      
-    }
-  }
 }
+
+
 
 
 footer {
@@ -547,9 +711,9 @@ footer {
   // NAVBAR RESPONSIVENESS
   // * When width shifts into position the nav backgroundw will become transparent
   
+  // now turns into navbar for mobile
   #navbar {
-    justify-content: space-between;
-    background-color: rgb(0, 18, 32, 0.9);
+    justify-content: end;
 
     h2 {
       font-size: 2rem;
@@ -567,19 +731,37 @@ footer {
   //HERO RESPONSIVENESS
 
   #hero {
-    .hero-item:nth-child(1) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 7rem;
+    padding: 2rem;
+    
+    .hero-item:nth-of-type(1) {
       max-width: 500px;
-      text-align: center;
       z-index: 2;
       // margin-bottom: 20%;
       // margin-top: 15%;
       // white-space: nowrap;
-      margin-inline: 0%;
     }
 
     #contact-btn {
       margin: 0 auto;
       align-self: center;
+    }
+
+    .hero-item:nth-of-type(2) {
+      
+      .shadow {
+        
+        img {
+          // width: 80%;
+          left: 0;
+          top: 0;
+          object-fit: cover;
+        }
+      }
     }
 
     
@@ -594,6 +776,9 @@ footer {
       width: 90vw;
       // margin-top: 55%
       flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      font-size: 0.8rem;
       
       .skills {
         .section-header {
@@ -657,7 +842,40 @@ footer {
 
   }
 
-  
+}
+
+@media (max-width: 768px) {
+  #projects {
+    #project-title {
+    }
+
+    #project-wrapper {
+      flex-direction: column;
+      
+      .project-item {
+        align-items: center;
+        text-align: center;
+        // min-height: 700px;
+        padding: 1.4rem;
+
+        .cardSection{
+          .techUsed {
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      
+      #project-grid-container {
+        .project-section {
+          font-size: 0.9rem;
+        }
+      }
+      
+    }
+
+  }
 }
 
 @media (max-width: 500px) {
