@@ -84,11 +84,11 @@ html {
   #nav-list {
     display: flex;
     align-items: center;
-    background: rgb(198,35,104);
-    background: linear-gradient(208deg, rgba(198,35,104,1) 36%, rgba(86,107,242,1) 100%); 
+    background-color: $primary;
     padding: 1rem;
     border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     li {
       display: inline;
@@ -116,7 +116,7 @@ html {
     border-radius: 0.3rem;
     border: none;
     background-color: transparent;
-    color: $primary;
+    color: yellow;
     display: none;
     transition: 250ms;
 
@@ -433,7 +433,7 @@ html {
       .section-header {
         color: white;
         letter-spacing: 3px;
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
       
       // skills container label
@@ -442,11 +442,13 @@ html {
       }
       
       .skills-wrapper {
-        
-        display: flex;
         gap: 0.5rem;
-        align-items: center;
         align-self: start;
+        display: flex;
+        align-items: center;
+        width: 400px;
+        max-width: 100%;
+        flex-wrap: wrap;
  
         span {
           padding: 0.5rem;
@@ -486,17 +488,12 @@ html {
       }
       
     }
+
+    
     
     // second skills container contains all the images of the skills i want to learn
     .skills:nth-of-type(2) {
       
-      h1 {
-        color: white;
-        font-size: 2rem;
-        letter-spacing: 3px;
-
-        // text-shadow: -3px -1px 16px $primary;
-      }
       
       p {
         line-height: 1.5;
@@ -513,100 +510,128 @@ html {
 #projects {
   z-index: 1;
   min-height: 600px;
-  padding: 1rem;
+  // background-color: #252525;
+  background: rgb(37,37,37);
+  background: linear-gradient(158deg, rgba(37,37,37,1) 84%, rgba(37,7,20,1) 84%); 
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #171717;
-  gap: 3rem;
+  flex-direction: column;
+  padding: 2rem;
 
-  #project-wrapper {
+  .project-section-container {
+    // border: 1px solid red;
+    max-height: 800px;
+    max-height:  1000px;
+    padding: 2rem;
     display: flex;
-    gap: 2rem;
-    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10rem;
+
+    .project-visual, .project-information {
+      // width: 600px;
+      min-width: 400px;
+      padding: 1rem;
+    }
     
+    .project-visual {
+      border-radius: 0.7rem;
+      background-color: $primary;
+      position: relative;
+
+      img {
+        position: relative;
+        left: -20px;
+        top: -20px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+        border-radius: 0.7rem;
+        max-width: 100%;
+        border: 2px solid $primary;
+      }
+      
+    }
     
-    .project-item {
+    $ffheader: 2rem;
+    $ffbody: 1.3rem;
+    
+    .project-information {
+      min-height: 500px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 4rem;
-      background: rgba(64, 64, 64, 0.7);
-      border: $primary 2px solid;
-      line-height: 1.5;
-      min-height: 600px;
-      max-width: 650px;
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: rgba(198, 35, 103, 0.616) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 
-
-
-      .cardSection:nth-of-type(1){
-        // car title
-        h2 {
-          color: pink;
-  
-        }
-
-        p {
-          color: rgb(231, 231, 231);
-        }
-        h5 {
-          color: pink;
-        }
-  
-        // icons for the cards
-        .techUsed {
-          
-          span {
-            font-size: 0.8rem;
-            background-color: $secondary;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
-            
-          }
-        }
-        
-        img {
-          border: 2px solid $primary;
-          margin: 0.5rem 0rem;
-          border-radius: 1rem;
-          box-shadow: rgba(228, 67, 217, 0.34) 0px 20px 30px -10px;
-        }
-        
+      // project logo along with header
+      h1 {
+        font-size: $ffheader;
+        align-self: start;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
       }
 
-      .cardSection:nth-of-type(2) {
-        button {
-          padding: 1rem;
+      // Subheader
+      h3 {
+        margin: 1rem;
+        align-self: start;
+        color: $primary;
+        letter-spacing: 3px;
+      }
+
+      p {
+        font-size: $ffbody;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+
+      .techUsed-Header {
+        color: $primary;
+        margin-bottom: 1rem;
+      }
+
+      .techUsed {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 4rem;
+        
+        span {
+          padding: 0.7rem;
+          border-radius: 1rem;
           background-color: $primary;
-          border: none;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          transition: 150ms;
+          white-space: nowrap;
+          
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+      }
+
+      .see-ProjectBtns {
+        display: flex;
+        gap: 2rem;
+        
+        button {
           color: white;
+          background-color: #c41d1d;
+          border: none;
           border-radius: 0.5rem;
-          margin-right: 1rem;
+          padding: 1rem;
+          box-shadow: rgba(170, 170, 170, 0.2) 0px 7px 29px 0px;
+          font-size: 1.2rem;
           cursor: pointer;
           transition: 150ms;
           
           &:hover {
-            background-color: $secondaryPurple;
+            background-color: rgb(121, 49, 49);
+            transform: translateY(-5px);
           }
         }
-        // project title
       }
-
-
     }
-  }
-
-  #project-title {
-    color: $primary;
-    letter-spacing: 3px;
-
-    font-size: 2rem;
-    // text-shadow: -3px -1px 16px $primary;
-    align-self: center;
+    
   }
   
 }
@@ -824,20 +849,9 @@ footer {
   // PROJECT RESPONSIVENESS
 
   #projects {
-    flex-direction: column;
-    padding: 1.5rem;
-    #project-title {
-      align-self: center;
-    }
-
-    #project-wrapper {
-
-      #project-grid-container {
-        .project-section {
-          font-size: 0.9rem;
-        }
-      }
-      
+    .project-section-container {
+      flex-direction: column;
+      max-width: 100%;
     }
 
   }
@@ -846,34 +860,7 @@ footer {
 
 @media (max-width: 768px) {
   #projects {
-    #project-title {
-    }
-
-    #project-wrapper {
-      flex-direction: column;
-      
-      .project-item {
-        align-items: center;
-        text-align: center;
-        // min-height: 700px;
-        padding: 1.4rem;
-
-        .cardSection{
-          .techUsed {
-            span {
-              font-size: 0.8rem;
-            }
-          }
-        }
-      }
-      
-      #project-grid-container {
-        .project-section {
-          font-size: 0.9rem;
-        }
-      }
-      
-    }
+    
 
   }
 }

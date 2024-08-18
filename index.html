@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6ab760c0b1.js" crossorigin="anonymous"></script>
 
     <link
       href="https://fonts.googleapis.com/css?family=Dancing Script"
@@ -69,7 +70,7 @@
             <img src="/src/assets/imgs/design2.png" alt="">
         </span>
         
-        <h1 id="showcase"><span style="color: white">Hello, I'm </span>Samuel</h1>
+        <h1 id="showcase"><span style="color: white">Hey, I'm </span>Samuel</h1>
         <h4>FRONTEND  DEVELOPER</h4>
         <p id="showcase-desc">
             I create and code elegantly simple designs, and I'm passionate about my work.<br />
@@ -105,23 +106,28 @@
           <br>
           <h5>CORE TECHNOLOGIES</h5>
           <section class="skills-wrapper">
-            <span>JavaScript <i class="fa-brands fa-js"></i></span>
+            <span>MongoDB <i class="fa-solid fa-database"></i></span>
+            <span>Express </span>
             <span>React <i class="fa-brands fa-react"></i></span>
             <span>NodeJS <i class="fa-brands fa-node-js"></i></span>
             <span>SCSS <i class="fa-brands fa-sass"></i></span>
-
           </section>
+
+          <!-- <h5>CORE CONCEPTS</h5>
+          <section class="skills-wrapper">
+            <span></span>
+          </section> -->
+
+
           <h5>OTHERS:</h5>
           <section class="skills-wrapper">
-            <span>Bootstrap <i class="fa-brands fa-bootstrap"></i></span>
             <span>Figma <i class="fa-brands fa-figma"></i></span>
-            <span>Python <i class="fa-brands fa-python"></i></span>
             <span>GIT <i class="fa-brands fa-git-alt"></i></span>
           </section>
 
         </div>
         <div class="skills">
-          <h1>ABOUT ME</h1>
+          <h1 class="section-header">ABOUT ME</h1>
           <div>
             <p>
               I'm a Front-End Developer that has a keen eye for a smooth user
@@ -143,56 +149,37 @@
     <!-- Jazz site -->
 
     <section id="projects">
-      <h1 id="project-title">PROJECTS</h1>
-      <div id="project-wrapper">
-        <section class="project-item">
-            <!-- First Section of the card -->
-            <div class="cardSection">
-                <img src="/src/assets/imgs/pokedex.png" alt="">
-                <h2>POKEDEX</h2>
-                <p>The frontend is served with a custom API, from the backend using expressJS.</p>
-                <p>This project gives you a catalog of different pokemon based on the type that you select.</p>
-                <br>
-                <h5>TECHNOLOGIES USED -</h5>
-                <div class="techUsed">
-                    <br>
-                    <span>React <i class="fa-brands fa-react"></i></span>
-                    <span>Sass <i class="fa-brands fa-sass"></i></span>
-                    <span>Node <i class="fa-brands fa-node-js"></i></span>
-                    <br>
-                    <br>
-                    <span>ExpressJS</span>
-                </div>
-            </div>
 
-            <!-- second section of the card -->
-            <div class="cardSection">
-                <button>See Code</button>
-                <button>Live Demo</button>
+        <!-- WOLF -->
+        <section class="project-section-container">
+            <div class="project-visual">
+                <img src="src/assets/imgs/wolfSS.png" alt="">
+            </div>
+            <div class="project-information">
+                <h1>
+                    <img src="src/assets/imgs/wolfLogo.png" alt="">Wolf
+                </h1>
+                <h3>SOCIAL MEDIA APPLICATION</h3>
+                <p>A C.R.U.D social media app hooked up with Mongodb. It uses JWT (JsonWebToken) for user authentication.</p>
+
+                <h4 class="techUsed-Header">TECHNOLOGIES USED - </h4>
+
+                <aside class="techUsed">
+                    <span>React <i class="fa-brands fa-react"></i></span>
+                    <span>SCSS <i class="fa-brands fa-sass"></i></span>
+                    <span>Express</span>
+                    <span>MongoDB <i class="fa-solid fa-database"></i></span>
+                </aside>
+
+                <aside class="see-ProjectBtns">
+                    <button>See Code!</button>
+                    <button>View Demo</button>
+                </aside>
+                
             </div>
         </section>
-        <section class="project-item">
-            <!-- First Section of the card -->
-            <div class="cardSection">
-                <img src="/src/assets/imgs/supercenter.png" alt="">
-                <h2>ECOMMERCE SITE</h2>
-                <p>Standard Ecommerce landing page template targeting small mom and pop shops. Made with just react/sass.</p>
-                <br>
-                <h5>TECHNOLOGIES USED -</h5>
-                <div class="techUsed">
-                    <br>
-                    <span>React <i class="fa-brands fa-react"></i></span>
-                    <span>Sass <i class="fa-brands fa-sass"></i></span>
-                </div>
-            </div>
 
-            <!-- second section of the card -->
-            <div class="cardSection">
-                <button>See Code</button>
-                <button>Live Demo</button>
-            </div>
-        </section>
-      </div>
+
     </section>
   </body>
 </html>
