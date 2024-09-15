@@ -4,8 +4,7 @@
   "description": "- Portfolio single page site",
   "main": "navbarFunctions.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,6 @@
   },
   "homepage": "https://github.com/TrustierSquid/Client-portfolio#readme",
   "devDependencies": {
-    "parcel": "^2.9.3",
     "sass": "^1.63.6"
   },
   "dependencies": {
