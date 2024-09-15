@@ -305,7 +305,8 @@ html {
   position: relative;
   left: -20px;
   top: -20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
 }
 
@@ -318,7 +319,6 @@ html {
   background: rgb(198, 35, 104);
   background: linear-gradient(139deg, rgb(198, 35, 104) 36%, rgb(86, 107, 242) 100%);
   padding: 2rem;
-  box-shadow: #c62368 10px 22px 20px 30px;
 }
 #about #about-flex-wrapper {
   padding: 0.5rem;
@@ -333,6 +333,7 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 1.3rem;
+  width: 100%;
 }
 #about #about-flex-wrapper .skills .section-header {
   color: white;
@@ -385,46 +386,29 @@ html {
 
 #projects {
   z-index: 1;
-  min-height: 600px;
-  background: rgb(37, 37, 37);
-  background: linear-gradient(158deg, rgb(37, 37, 37) 84%, rgb(37, 7, 20) 84%);
   color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
 }
 #projects .project-section-container {
-  max-height: 800px;
-  max-height: 1000px;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10rem;
-}
-#projects .project-section-container .project-visual, #projects .project-section-container .project-information {
-  min-width: 400px;
-  padding: 1rem;
-}
-#projects .project-section-container .project-visual {
-  border-radius: 0.7rem;
-  background-color: #c62368;
-  position: relative;
-}
-#projects .project-section-container .project-visual img {
-  position: relative;
-  left: -20px;
-  top: -20px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
-  border-radius: 0.7rem;
-  max-width: 100%;
-  border: 2px solid #c62368;
-}
-#projects .project-section-container .project-information {
-  min-height: 500px;
+  height: 800px;
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+#projects .project-section-container .projectPortrait {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+  border-radius: 0.7rem;
+  border: 2px solid #c62368;
+  width: 100%;
+  align-self: center;
+}
+#projects .project-section-container .project-information {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
+  padding: 3rem;
 }
 #projects .project-section-container .project-information h1 {
   font-size: 2rem;
@@ -486,74 +470,6 @@ html {
   transform: translateY(-5px);
 }
 
-footer {
-  position: absolute;
-  width: 95%;
-  padding: 1rem;
-  min-height: 100px;
-  display: grid;
-  justify-content: left;
-  place-items: center;
-  border-top: #003a67 2px solid;
-  margin-top: 2rem;
-  height: 100px;
-}
-footer div {
-  display: flex;
-}
-
-#contact-container {
-  max-width: 100%;
-  max-height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-#contact-container h1 {
-  text-align: left;
-  color: white;
-}
-#contact-container #form-container {
-  background-color: #123;
-  height: 500px;
-  width: 600px;
-  border-radius: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-#contact-container #form-container #contact-form {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 1.5rem;
-}
-#contact-container #form-container #contact-form .contact-component label {
-  color: white;
-}
-#contact-container #form-container #contact-form .contact-component #contact-message {
-  height: 100px;
-  width: 100%;
-}
-#contact-container #form-container #contact-form .contact-component input {
-  height: 30px;
-  width: 100%;
-}
-#contact-container #form-container #contact-form .contact-component button {
-  height: 30px;
-  padding: 0.5rem;
-  width: 200px;
-  background-color: #c62368;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 250ms;
-}
-#contact-container #form-container #contact-form .contact-component button:hover {
-  background-color: #222;
-}
-
 @media (max-width: 992px) {
   #navbar {
     justify-content: end;
@@ -586,7 +502,8 @@ footer div {
   #hero .hero-item:nth-of-type(2) .shadow img {
     left: 0;
     top: 0;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #about #about-flex-wrapper {
     width: 90vw;
@@ -621,9 +538,24 @@ footer div {
     text-align: center;
     font-size: 1.2rem;
   }
+  #projects {
+    margin-top: 8rem;
+  }
   #projects .project-section-container {
+    padding: 1rem;
     flex-direction: column;
     max-width: 100%;
+  }
+  #projects .project-section-container .projectPortrait {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+    border-radius: 0.7rem;
+    border: 2px solid #c62368;
+  }
+  #projects .project-section-container .project-information {
+    padding: 0rem;
+  }
+  #projects .project-section-container .project-information .techUsed {
+    max-width: 50%;
   }
 }
 @media (max-width: 500px) {
