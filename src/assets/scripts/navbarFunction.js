@@ -8,8 +8,8 @@ const mobileNavLinks = document.querySelectorAll(".mobileNavLinks");
     mobileNavMenu.style.width = '100%';
     mobileNavBtn.style.display = 'none';
     mobileNavExitBtn.style.display = 'block'; //
-    
-    mobileNavBtn.style.opacity = '0'; 
+
+    mobileNavBtn.style.opacity = '0';
 })
  */
 
@@ -92,14 +92,14 @@ projectBtn.addEventListener("click", () => {
   location.href = "#projects";
 });
 
-function migrate(GH, LI) {
-  GH.addEventListener("click", () => {
-    location.href = "https://github.com/TrustierSquid";
-  });
+// function migrate(GH, LI) {
+//   GH.addEventListener("click", () => {
+//     window.open = "https://github.com/TrustierSquid, '_blank'";
+//   });
 
-  LI.addEventListener("click", () => {
-    location.href = "www.linkedin.com/in/samuel-hunt-387ab7245";
-  });
-}
+//   LI.addEventListener("click", () => {
+//     location.href = "www.linkedin.com/in/samuel-hunt-387ab7245";
+//   });
+// }
 
-migrate(heroGithubBtn, heroLinkedinBtn);
+// migrate(heroGithubBtn, heroLinkedinBtn);
