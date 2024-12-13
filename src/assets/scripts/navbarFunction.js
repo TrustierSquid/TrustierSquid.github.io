@@ -87,10 +87,7 @@ let projectBtn = document.getElementById("contact-btn");
 let heroGithubBtn = document.getElementById("hero-github");
 let heroLinkedinBtn = document.getElementById("hero-linkedin");
 
-projectBtn.addEventListener("click", () => {
-  console.log("clicked project btn");
-  location.href = "#projects";
-});
+
 
 // function migrate(GH, LI) {
 //   GH.addEventListener("click", () => {

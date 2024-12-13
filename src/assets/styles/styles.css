@@ -240,10 +240,10 @@ html {
   border: none;
   border-radius: 0.5rem;
   color: white;
+  text-decoration: none;
   transition: 150ms;
   cursor: pointer;
   height: 50px;
-  width: 300px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   background: #c62368;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -394,37 +394,35 @@ html {
   color: white;
 }
 #projects .project-section-container {
-  height: 800px;
-  margin-top: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 1rem;
+  max-width: 100%;
 }
 #projects .project-section-container .projectPortrait {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
   border-radius: 0.7rem;
   border: 2px solid #c62368;
-  width: 100%;
+  width: 70%;
   align-self: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #projects .project-section-container .project-information {
   display: flex;
   flex-direction: column;
-  width: 80%;
   align-self: center;
   padding: 3rem;
+  padding-inline: 15rem;
 }
 #projects .project-section-container .project-information h1 {
   font-size: 2rem;
-  align-self: start;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 #projects .project-section-container .project-information h3 {
   margin: 1rem;
-  align-self: start;
   color: #c62368;
   letter-spacing: 3px;
 }
@@ -443,6 +441,7 @@ html {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 4rem;
+  max-width: 100%;
 }
 #projects .project-section-container .project-information .techUsed span {
   padding: 0.7rem;
@@ -549,18 +548,34 @@ html {
   #projects .project-section-container {
     padding: 1rem;
     flex-direction: column;
-    max-width: 100%;
   }
   #projects .project-section-container .projectPortrait {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
     border-radius: 0.7rem;
     border: 2px solid #c62368;
+    width: 100%;
   }
   #projects .project-section-container .project-information {
-    padding: 0rem;
+    padding-inline: 0rem;
+    justify-content: center;
+  }
+  #projects .project-section-container .project-information h1 {
+    justify-content: center;
+  }
+  #projects .project-section-container .project-information h3 {
+    text-align: center;
+  }
+  #projects .project-section-container .project-information p {
+    text-align: center;
+  }
+  #projects .project-section-container .project-information .techUsed-Header {
+    text-align: center;
   }
   #projects .project-section-container .project-information .techUsed {
-    max-width: 50%;
+    justify-content: center;
+  }
+  .see-ProjectBtns {
+    justify-content: center;
   }
 }
 @media (max-width: 500px) {
