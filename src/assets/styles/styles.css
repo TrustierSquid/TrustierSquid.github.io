@@ -583,7 +583,9 @@ html {
     height: 1.2rem;
   }
   #hero .hero-item:nth-child(1) #stat-container {
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
   }
   #hero .hero-item:nth-child(1) #stat-container img {
     display: none;

@@ -825,7 +825,9 @@ html {
   #hero {
     .hero-item:nth-child(1) {
       #stat-container {
-        flex-direction: column;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
         img {
           display: none;
         }
