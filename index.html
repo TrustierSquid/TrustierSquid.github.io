@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Resources:
-
-        Haikei: Custom SVG patterns for UI desgin
-        Realtime colors: for finding the perfect color scheme
-
-     -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Hunt | Portfolio</title>
@@ -58,27 +52,27 @@
         <li><a href="#projects" class="mobileNavLinks">Projects</a></li>
         <li><a href="mailto:huntdevelops@gmail.com" class="mobileNavLinks">Contact</a></li>
       </ul>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <header id="hero">
+        <!-- Hero Section -->
+        <header id="hero">
       <div class="hero-item">
         <span class="designAspect">
-            <img src="/src/assets/imgs/design2.png" alt="">
+        <img src="/src/assets/imgs/design2.png" alt="">
         </span>
         <span class="designAspect">
-            <img src="/src/assets/imgs/design2.png" alt="">
+        <img src="/src/assets/imgs/design2.png" alt="">
         </span>
 
         <h1 id="showcase"><span style="color: white">Hey, I'm </span>Samuel</h1>
-        <h4>SOFTWARE DEVELOPER</h4>
+        <h4>WEB DEVELOPER &amp; IT SPECIALIST</h4>
         <p id="showcase-desc">
-            I create and code elegantly simple designs.<br />
+        I create and code elegantly simple designs and reliable IT solutions.<br />
         </p>
         <!-- cantact button and container contains github and linkedin and youtube -->
         <div id="stat-container">
           <button id="hero-github" onclick="window.open('https://github.com/TrustierSquid', '_blank')"><i class="fa fa-github"></i></button>
-          <a id="contact-btn" href="#projects">My Projects</a>
+          <a id="contact-btn" href="#projects"><i class="fa-solid fa-magnifying-glass-dollar"></i> What I'm Currently Building...</a>
         </div>
       </div>
 
@@ -103,13 +97,18 @@
         <div class="skills">
           <h1 class="section-header">MY EXPERTISE</h1>
           <br>
-          <h5>CORE TECHNOLOGIES</h5>
+          <h5>CORE WEB DEVELOPMENT TECHNOLOGIES</h5>
           <section class="skills-wrapper">
             <span>MongoDB <i class="fa-solid fa-database"></i></span>
-            <span>Express </span>
+            <span>Express <i class="fa-solid fa-hexagon-nodes"></i></span>
             <span>React <i class="fa-brands fa-react"></i></span>
             <span>NodeJS <i class="fa-brands fa-node-js"></i></span>
             <span>SCSS <i class="fa-brands fa-sass"></i></span>
+            <span>Python <i class="fa-brands fa-python"></i></span>
+            <span>Flask <i class="fa-brands fa-python"></i></span>
+            <span>Docker & Compose <i class="fa-brands fa-docker"></i></span>
+            <span>Figma <i class="fa-brands fa-figma"></i></span>
+            <span>GIT <i class="fa-brands fa-git-alt"></i></span>
           </section>
 
           <!-- <h5>CORE CONCEPTS</h5>
@@ -118,20 +117,26 @@
           </section> -->
 
 
-          <h5>OTHERS:</h5>
+          <h5>IT & SYSTEMS SUPPORT</h5>
           <section class="skills-wrapper">
-            <span>Figma <i class="fa-brands fa-figma"></i></span>
-            <span>GIT <i class="fa-brands fa-git-alt"></i></span>
+            <span class="ITSkills">Command-line utilities <i class="fa-solid fa-toolbox"></i></span>
+            <span class="ITSkills">Operating System installation and imaging <i class="fa-brands fa-linux"></i></span>
+            <span class="ITSkills">Connectivity Troubleshooting <i class="fa-solid fa-code-branch"></i></span>
+            <span class="ITSkills">Microsoft Office suite <i class="fa-brands fa-microsoft"></i></span>
+
+            <span class="ITSkills">Windows 10/11 Troubleshooting & Support <i class="fa-brands fa-windows"></i></span>
+            <span class="ITSkills">MacOS Troubleshooting & Support <i class="fa-brands fa-apple"></i></span>
+            <span class="ITSkills">Linux Troubleshooting & Support (Ubuntu & Arch based Distros) <i class="fa-brands fa-ubuntu"></i></span>
+
           </section>
 
         </div>
         <div class="skills">
           <h1 class="section-header">ABOUT ME</h1>
-          <div>
-            <p>
-              I'm a Front-End Developer focused on delivering seamless and engaging user experiences. I design and maintain responsive websites, writing clean, efficient code with the latest technologies. I enjoy collaborating with teams to bring ideas to life.
-            </p>
-          </div>
+          <p id="aboutMeText">
+            I'm a Web Developer and IT Specialist who builds responsive, accessible web applications and maintains reliable infrastructure. I write clean, modular front‑end and back‑end code, design APIs and databases, and automate deployments and system maintenance. I also manage networks, troubleshoot hardware and software issues, harden security, and monitor performance to keep services running smoothly. I enjoy collaborating with teams to turn ideas into scalable, user‑focused solutions.
+          </p>
+
         </div>
       </div>
     </section>
@@ -141,33 +146,39 @@
         <!-- WOLF -->
         <section class="project-section-container">
 
-          <img class="projectPortrait" src="src/assets/imgs/wolfUpdate2.png" alt="">
-
-          <div class="project-information">
-              <h1>
-                  <img src="src/assets/imgs/wolfLogo.png" alt="">Wolf
-              </h1>
-              <h3>SOCIAL MEDIA PLATFORM</h3>
-              <p>I developed Wolf, a social media platform designed to bring people closer together through intuitive and engaging features.
-
-                Now in its first release, Wolf offers a seamless, user-friendly environment for sharing moments and discovering new content, fostering meaningful connections every step of the way.</p>
-
-              <h4 class="techUsed-Header">TECHNOLOGIES USED - </h4>
-
-              <aside class="techUsed">
-                  <span>React <i class="fa-brands fa-react"></i></span>
-                  <span>SCSS <i class="fa-brands fa-sass"></i></span>
-                  <span>Express</span>
-                  <span>MongoDB <i class="fa-solid fa-database"></i></span>
-              </aside>
-
-
-              <aside class="see-ProjectBtns">
-                  <button onclick="window.open('https://github.com/TrustierSquid/Wolf/tree/main', '_blank')">View Code!</button>
-                  <button onClick="window.open('https://wlfyy.com', '_blank')">Try it out!</button>
-              </aside>
-
+          <div id="projectContainer1">
+            <img class="projectPortrait" src="src/assets/imgs/wlfyy.com_profile.png" alt="">
           </div>
+
+
+          <div id="projectContainer2">
+            <div class="project-information">
+                <h1><img src="src/assets/imgs/wolfLogo.png" alt="">WOLFLITE</h1>
+                <br>
+                <h4 class="techUsed-Header">SOCIAL MEDIA PLATFORM:</h4>
+                <p>Wolflite is a modern social blogging platform featuring interactive polls, real-time engagement, and seamless user profiles. Built with React/Flask and deployed via Docker, it showcases full-stack development with persistent data storage, file uploads, and responsive design.</p>
+
+                <h4 class="techUsed-Header">KEY FEATURES:</h4>
+                <p>Social posting, interactive polls, user profiles, real-time engagement, file uploads, responsive design.</p>
+
+                <h4 class="techUsed-Header">TECHNOLOGIES USED: </h4>
+
+                <aside class="techUsed">
+                    <span><i class="fa-brands fa-react"></i> React + Vite</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span><i class="fa-brands fa-python"></i> Python + Flask </span>
+                    <span>SQLite <i class="fa-solid fa-database"></i></span>
+                </aside>
+
+
+                <aside class="see-ProjectBtns">
+                    <button onclick="window.open('https://github.com/TrustierSquid/wolflite', '_blank')"><i class="fa-brands fa-github"></i> View Source Code</button>
+                    <button onClick="window.open('https://wlfyy.com', '_blank')"><i class="fa-solid fa-right-from-bracket"></i> Visit WOLFITE</button>
+                </aside>
+
+            </div>
+          </div>
+
 
 
         </section>
