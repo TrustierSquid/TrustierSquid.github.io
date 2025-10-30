@@ -13,12 +13,8 @@ body {
   background-color: #252525;
   height: 100vh;
   width: 100vw;
-}
-
-html {
   scroll-behavior: smooth;
-  height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 .social-media {
@@ -157,7 +153,6 @@ html {
   align-items: start;
   padding: 2rem;
   margin-inline: 2rem;
-  text-align: left;
 }
 #hero .hero-item:nth-of-type(1) .designAspect {
   pointer-events: none;
@@ -203,12 +198,11 @@ html {
 }
 #hero .hero-item:nth-of-type(1) h1#showcase {
   color: #c62368;
-  font-size: 5rem;
   text-shadow: -3px -1px 16px #c62368;
   font-weight: bolder;
   animation-name: lockInPlace;
   animation-duration: 1s;
-  z-index: 3;
+  z-index: 100;
 }
 #hero .hero-item:nth-of-type(1) h1#showcase span {
   text-shadow: none;
@@ -222,6 +216,7 @@ html {
 #hero .hero-item:nth-of-type(1) #showcase-desc {
   animation-name: lockInPlace;
   animation-duration: 1s;
+  z-index: 100;
 }
 @keyframes lockInPlace {
   0% {
@@ -301,11 +296,10 @@ html {
   border: 2px solid #c62368;
   border-radius: 0.7rem;
   position: relative;
-  left: -20px;
-  top: -20px;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+  z-index: 100;
 }
 
 #about {
@@ -337,15 +331,15 @@ html {
   letter-spacing: 3px;
   font-size: 1.5rem;
 }
-#about #about-flex-wrapper .skills h5 {
+#about #about-flex-wrapper .skills .skillsTitle {
   align-self: start;
 }
 #about #about-flex-wrapper .skills .skills-wrapper {
   gap: 0.5rem;
   align-self: start;
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 400px;
   max-width: 100%;
   flex-wrap: wrap;
 }
@@ -381,7 +375,6 @@ html {
 #about #about-flex-wrapper .skills:nth-of-type(2) #aboutMeText {
   line-height: 1.5;
   text-align: center;
-  font-size: 1rem;
   max-width: 600px;
 }
 
@@ -421,7 +414,6 @@ html {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
-  text-align: left;
 }
 #projects .project-section-container #projectContainer2 .project-information .techUsed-Header {
   color: #c62368;
@@ -469,10 +461,9 @@ html {
   justify-content: center;
 }
 #projects .project-section-container #projectContainer1 .projectPortrait {
-  width: 100%;
   height: auto;
-  max-width: 900px;
   max-height: 500px;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -505,8 +496,11 @@ html {
     padding: 2rem;
   }
   #hero .hero-item:nth-of-type(1) {
-    max-width: 500px;
+    max-width: 100%;
     z-index: 2;
+    margin: 0;
+    padding: 0;
+    align-items: center;
   }
   #hero .hero-item:nth-of-type(2) {
     display: none;
@@ -555,10 +549,12 @@ html {
   }
   #projects {
     margin-top: 4rem;
+    width: 100%;
   }
   #projects .project-section-container {
-    padding: 1rem;
     flex-direction: column;
+    padding: 0;
+    width: 95%;
   }
   #projects .project-section-container .projectPortrait {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;

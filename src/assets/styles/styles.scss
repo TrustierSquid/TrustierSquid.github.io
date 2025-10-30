@@ -26,13 +26,14 @@ body {
   background-color: #252525;
   height: 100vh;
   width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-html {
-  scroll-behavior: smooth;
-  height: 100vh;
-  width: 100vw;
-}
+// html {
+//   height: 100vh;
+//   width: 100vw;
+// }
 
 @mixin button {
     height: 40px;
@@ -204,7 +205,6 @@ html {
     align-items: start;
     padding: 2rem;
     margin-inline: 2rem;
-    text-align: left;
 
 
 
@@ -265,12 +265,11 @@ html {
     h1#showcase {
       // font-family: "Dancing Script";
       color: $primary;
-      font-size: 5rem;
       text-shadow: -3px -1px 16px $primary;
       font-weight: bolder;
       animation-name: lockInPlace;
       animation-duration: 1s;
-      z-index: 3;
+      z-index: 100;
 
       span {
         text-shadow: none;
@@ -289,6 +288,7 @@ html {
     #showcase-desc {
       animation-name: lockInPlace;
       animation-duration: 1s;
+      z-index: 100;
     }
 
     // animation for hero TITLE
@@ -391,10 +391,9 @@ html {
         border: 2px solid $primary;
         border-radius: 0.7rem;
         position: relative;
-        left: -20px;
-        top: -20px;
         object-fit: cover;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
+        z-index: 100;
 
       }
     }
@@ -440,7 +439,7 @@ html {
       }
 
       // skills container label
-      h5 {
+      .skillsTitle {
         align-self: start;
       }
 
@@ -448,8 +447,8 @@ html {
         gap: 0.5rem;
         align-self: start;
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 400px;
         max-width: 100%;
         flex-wrap: wrap;
 
@@ -508,7 +507,6 @@ html {
       #aboutMeText {
         line-height: 1.5;
         text-align: center;
-        font-size: 1rem;
         max-width: 600px;
       }
     }
@@ -565,7 +563,6 @@ html {
           font-size: 1rem;
           line-height: 1.5;
           margin-bottom: 2rem;
-          text-align: left;
         }
 
         .techUsed-Header {
@@ -625,10 +622,9 @@ html {
 
 
       .projectPortrait {
-        width: 100%;
         height: auto;
-        max-width: 900px;
         max-height: 500px;
+        max-width: 100%;
         object-fit: contain;
         object-position: center;
         box-sizing: border-box;
@@ -684,17 +680,13 @@ html {
     padding: 2rem;
 
     .hero-item:nth-of-type(1) {
-      max-width: 500px;
+      max-width: 100%;
       z-index: 2;
-      // margin-bottom: 20%;
-      // margin-top: 15%;
-      // white-space: nowrap;
+      margin: 0;
+      padding: 0;
+      align-items: center;
     }
 
-    // #contact-btn {
-    //   // margin: 0 auto;
-    //   // align-self: center;
-    // }
 
     .hero-item:nth-of-type(2) {
       display: none;
@@ -772,9 +764,13 @@ html {
 
   #projects {
     margin-top: 4rem;
+    width: 100%;
+
+
     .project-section-container {
-      padding: 1rem;
       flex-direction: column;
+      padding: 0;
+      width: 95%;
 
       .projectPortrait {
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;
