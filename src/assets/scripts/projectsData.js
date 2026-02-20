@@ -48,8 +48,8 @@ const projectsData = [
     logoPath: 'src/assets/imgs/wolfLogo.png',
     imagePath: 'src/assets/imgs/SAAS.png',
     type: 'SAAS APPLICATION',
-    description: 'a8n.tools is home to two applications: RUS, a URL shortener, and RustyLinks, a bookmark manager.',
-    keyFeatures: 'Stripe payment integration, user authentication and account creation, subscription management dashboard. RUS: Self-hostable URL shortener with QR code generation. RustyLinks: Bookmark manager with tagging, search, and organization.',
+    description: 'a8n.tools is a SaaS platform with Stripe payments, user accounts, and a subscription dashboard. <span class="highlight">RUS:</span> Self-hostable URL shortener with QR code generation. <span class="highlight">RustyLinks:</span> Bookmark manager with tagging, search, and organization.',
+    keyFeatures: '',
     technologies: [
       { name: 'React', icon: 'fa-brands fa-react' },
       { name: 'Tailwind', icon: 'fa-brands fa-tailwind-css' },

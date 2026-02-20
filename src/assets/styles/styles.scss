@@ -634,10 +634,11 @@ body {
       font-size: 0.85rem;
       line-height: 1.5;
       color: #ccc;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+
+      .highlight {
+        color: $primary;
+        font-weight: bold;
+      }
     }
 
     &__techs {
@@ -819,10 +820,6 @@ body {
 
     .project-card__image {
       height: 160px;
-    }
-
-    .project-card__desc {
-      -webkit-line-clamp: 3;
     }
   }
 

@@ -479,10 +479,10 @@ body {
   font-size: 0.85rem;
   line-height: 1.5;
   color: #ccc;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+#projects .project-card__desc .highlight {
+  color: #c62368;
+  font-weight: bold;
 }
 #projects .project-card__techs {
   display: flex;
@@ -605,9 +605,6 @@ body {
   }
   #projects .project-card__image {
     height: 160px;
-  }
-  #projects .project-card__desc {
-    -webkit-line-clamp: 3;
   }
 }
 @media (max-width: 768px) {
