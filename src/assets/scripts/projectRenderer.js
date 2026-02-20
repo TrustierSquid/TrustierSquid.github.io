@@ -7,7 +7,7 @@ class ProjectRenderer {
   }
 
   generateTechChip(tech) {
-    return `<span><i class="${tech.icon}"></i> ${tech.name}</span>`;
+    return `<span>${tech.name}</span>`;
   }
 
   generateButton(link) {
